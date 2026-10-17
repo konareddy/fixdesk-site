@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixDesk – AI-assisted Salesforce fixes, from issue to deployment</title>
+<meta name="description" content="FixDesk by Cloudeation: bring in a Salesforce issue from Jira, Azure DevOps or Copado, let AI find the root cause and propose the fix, review it, deploy it safely and test it with evidence.">
+<meta property="og:title" content="FixDesk by Cloudeation">
+<meta property="og:description" content="AI-assisted Salesforce fixes - from issue to deployment, with your review at every step.">
+<meta property="og:image" content="https://fixdesk.cloudeation.net/assets/fixdesk.png">
+<link rel="icon" href="assets/fixdesk.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+  <nav>
+    <a href="#features">Features</a><a href="#how">How it works</a><a href="#workspaces">Workspaces</a><a href="#safety">Safety</a>
+    <a href="#pricing">Pricing</a><a href="support.html">Support</a>
+    <a class="btn primary small" href="#download">Start free trial</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">⚡ For Salesforce developers, admins and consultants</span>
+    <h1>From Salesforce issue to <em>tested fix</em> – with AI doing the legwork.</h1>
+    <p class="lead">FixDesk brings in the user story, reads your org, explains the root cause in plain English and proposes the change.
+      You review every line, deploy along your promotion path and get test evidence ready to attach to the story.</p>
+    <div class="cta"><a class="btn primary" href="#download">Download for Mac</a><a class="btn ghost" href="#how">See how it works</a></div>
+    <p class="fine">7-day free trial · no credit card · runs on your computer – your org data stays with you</p>
+  </div>
+  <div class="mock" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <div class="head"><b>FixDesk</b><span>Issues</span><span>Ask AI</span><span>Org Browser</span><span>SOQL</span><span class="ws">● Acme Corp</span></div>
+    <div class="steps"><span>✓ Analysed</span><span>✓ Fix proposed</span><span>✓ Review 4/4</span><span>✓ Deployed to dev</span><span class="cur">● Test 4/6</span><span class="todo">○ Promote to QA</span></div>
+    <div class="body">
+      <div class="col">
+        <div class="card"><b>US-1042 · Escalation count never updates</b><span class="pill">Jira</span> <span class="pill" style="background:#dcfce7;color:#166534">Deployed</span></div>
+        <div class="card todo"><b>☐ For you to do: 1 open</b>Give Read access to Escalated Cases · <a href="#">Open in Salesforce ↗</a></div>
+        <div class="card ai"><b>✦ Root cause</b>The handler counts Status "Priority", which this org doesn't have – and writes a field that doesn't exist.</div>
+      </div>
+      <div class="col">
+        <div class="card"><b>CaseEscalationHandler.cls</b>
+          <div class="diff"><div class="del">- c.Status == 'Priority'</div><div class="add">+ c.Status == 'Escalated'</div><div class="add">+ acc.Escalation_Count__c = n;</div></div>
+          <span class="pill" style="background:#dcfce7;color:#166534">Approved</span></div>
+        <div class="card"><b>Test run · 11:37</b>✓ 4 passed · ✕ 1 failed · 12 screenshots · 📄 evidence.docx</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="features"><div class="wrap">
+  <div class="kicker">Features</div>
+  <h2>Everything a Salesforce fix needs, in one desk</h2>
+  <p class="sub">No more jumping between the story, Setup, VS Code, the CLI and a Word template. FixDesk keeps the whole fix – and its proof – together.</p>
+  <div class="grid g3">
+    <div class="feat"><div class="ic">📥</div><h3>Stories in, one click</h3><p>Import user stories and bugs from Jira, Azure DevOps Boards or Copado – with the description, so the AI can start right away.</p></div>
+    <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything is changed.</p></div>
+    <div class="feat"><div class="ic">⇄</div><h3>Proposed changes you review</h3><p>Every change is shown side by side with what is in the org now. Approve or reject each one – nothing is deployed without you.</p></div>
+    <div class="feat"><div class="ic">🚀</div><h3>Validate and deploy safely</h3><p>Validate first, deploy with the right tests, with a backup of what was there. Follow your promotion path, including Copado.</p></div>
+    <div class="feat"><div class="ic">🧪</div><h3>Tests with evidence</h3><p>Test cases written for the change, run in the browser with screenshots, and a Word evidence document ready for the story.</p></div>
+    <div class="feat"><div class="ic">☐</div><h3>Clear next steps</h3><p>Steps only you can do become a checklist with a click-by-click guide and an "Open in Salesforce" link to the exact Setup page.</p></div>
+    <div class="feat"><div class="ic">💬</div><h3>Ask AI about your org</h3><p>Ask questions in plain English. Answers come with query results you can export – record changes wait for your approval.</p></div>
+    <div class="feat"><div class="ic">🧰</div><h3>Org tools built in</h3><p>Org Browser, SOQL, Org Compare, Data Loader and Seed Data – the everyday tools, without leaving the fix.</p></div>
+    <div class="feat"><div class="ic">📝</div><h3>Story updates written for you</h3><p>Description, root cause, resolution, acceptance criteria and test notes – drafted from the work, kept as versions.</p></div>
+  </div>
+</div></section>
+
+<section id="how" class="alt"><div class="wrap">
+  <div class="kicker">How it works</div>
+  <h2>Five steps, and you stay in control of each one</h2>
+  <div class="flow">
+    <div><b>Bring in the issue</b><span>Import from Jira, Azure DevOps or Copado, or paste the request.</span></div>
+    <div><b>AI analyses</b><span>Reads the org read-only and explains the cause in plain words.</span></div>
+    <div><b>You review</b><span>See each proposed change next to the org's version. Approve or reject.</span></div>
+    <div><b>Deploy</b><span>Validate, deploy with tests and a backup, along your promotion path.</span></div>
+    <div><b>Test &amp; prove</b><span>Tests run with screenshots; the evidence document is ready to attach.</span></div>
+  </div>
+</div></section>
+
+<section id="workspaces"><div class="wrap split">
+  <div>
+    <div class="kicker">Workspaces</div>
+    <h2>One workspace per client. Nothing crosses over.</h2>
+    <p class="sub">Consultants work for several clients at once. Each workspace has its own orgs, issues, AI conversations, notes, promotion path and work tracking connection.</p>
+    <ul class="checks">
+      <li>Switch client in one click – every screen shows only that client's orgs and work</li>
+      <li>Share an org (like a Copado org) between workspaces when you need to</li>
+      <li>Own Jira, Azure DevOps or Copado connection per workspace</li>
+      <li>Checked automatically: no workspace can open another's issues or orgs</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <div class="wsrow"><i style="background:#16a34a"></i><b>Acme Corp</b><span>4 orgs · 12 issues</span></div>
+    <div class="wsrow"><i style="background:#5b7cfa"></i><b>Globex</b><span>6 orgs · 31 issues</span></div>
+    <div class="wsrow"><i style="background:#e8590c"></i><b>Internal</b><span>2 orgs · 3 issues</span></div>
+    <p class="fine" style="margin:12px 0 0">+ New workspace – each extra workspace is $1.00/month.</p>
+  </div>
+</div></section>
+
+<section id="safety" class="alt"><div class="wrap">
+  <div class="kicker">Safety &amp; privacy</div>
+  <h2>Built so that nothing happens by accident</h2>
+  <div class="grid g4">
+    <div class="feat"><div class="ic">🔒</div><h3>Read-only by default</h3><p>Every org starts read-only. Deploy and data rights are given per org, with a typed confirmation.</p></div>
+    <div class="feat"><div class="ic">🏭</div><h3>Production lock</h3><p>Production orgs can only be read or blocked – unless you deliberately turn the lock off.</p></div>
+    <div class="feat"><div class="ic">💻</div><h3>Runs on your computer</h3><p>Issues, files and evidence stay on your machine. Logins use the Salesforce CLI; tokens live in your Keychain.</p></div>
+    <div class="feat"><div class="ic">🧾</div><h3>Full history</h3><p>Every rule change, deployment and data action is logged, with a backup taken before each deploy.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <div class="kicker">Pricing</div>
+  <h2>Simple pricing. Start free.</h2>
+  <p class="sub">Try everything for 7 days – no credit card. Then one low price per user.</p>
+  <div class="grid g3">
+    <div class="price"><h3>Free trial</h3><div class="amt">$0 <small>for 7 days</small></div>
+      <ul><li>Every feature</li><li>Up to 3 workspaces</li><li>No credit card</li></ul>
+      <a class="btn ghost" href="#download">Download</a></div>
+    <div class="price best"><h3>Personal <span class="tag">Most popular</span></h3><div class="amt">$2.99 <small>/ user / month</small></div>
+      <ul><li>Everything in FixDesk</li><li>1 workspace included</li><li>Extra workspaces $1.00 / month each</li><li>Updates included</li></ul>
+      <a class="btn primary" href="#download">Start free trial</a></div>
+    <div class="price"><h3>Team</h3><div class="amt">Let's talk</div>
+      <ul><li>Shared server for the team</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Single sign-on</li></ul>
+      <a class="btn ghost" href="support.html#contact">Contact us</a></div>
+  </div>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+  <div class="kicker" style="text-align:center">FAQ</div>
+  <h2 style="text-align:center">Questions, answered</h2>
+  <div class="faq">
+    <details><summary>Does FixDesk change my org on its own?</summary><p>No. The AI reads the org read-only. Code and configuration changes are proposed for your review, and only deployed when you approve and start the deployment. Record changes also wait for your approval.</p></details>
+    <details><summary>Where is my data kept?</summary><p>On your computer. FixDesk runs locally; issues, attachments, test evidence and backups are stored in your own data folder. Salesforce logins use the Salesforce CLI on your machine, and Jira / Azure DevOps tokens are kept in your system's secure password store.</p></details>
+    <details><summary>Which tools does it work with?</summary><p>Salesforce orgs (sandboxes, developer and production orgs), Jira Cloud and Data Center, Azure DevOps Boards and Copado user stories. More work tracking tools can be added.</p></details>
+    <details><summary>What do I need to run it?</summary><p>A Mac (Windows is available too), the Salesforce CLI, and an AI assistant subscription that FixDesk connects to on your computer. The setup guide inside the app checks each one for you.</p></details>
+    <details><summary>How do workspaces work?</summary><p>A workspace keeps one client or project apart: its orgs, issues, AI conversations, notes, promotion path and work tracking connection. One workspace is included; each extra one is $1.00 per month.</p></details>
+    <details><summary>Can I cancel any time?</summary><p>Yes. The subscription is monthly. Your data stays on your computer either way.</p></details>
+  </div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <div class="banner">
+    <h2>Fix your next Salesforce issue with FixDesk</h2>
+    <p>7-day free trial. Download, connect an org, import a story – and see the root cause in minutes.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" style="background:#fff;color:#0b2e6b" href="downloads/FixDesk-0.1.0.dmg">⬇ Download for Mac</a>
+      <a class="btn ghost" href="support.html#contact">Talk to us</a></div>
+    <p class="fine" style="color:rgba(255,255,255,.7)">Version 0.1.0 · macOS 12 or later · Windows version on request</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+    <p>AI-assisted Salesforce fixes – from issue to deployment, with your review at every step.</p>
+    <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
+  <div><h4>Product</h4><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#safety">Safety</a><a href="#pricing">Pricing</a></div>
+  <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#kb">Knowledge base<span class="soon">SOON</span></a><a href="support.html#tickets">Support tickets<span class="soon">SOON</span></a><a href="support.html#contact">Contact</a></div>
+  <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

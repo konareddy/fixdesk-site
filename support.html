@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixDesk Support – Help center</title>
+<meta name="description" content="Help for FixDesk by Cloudeation: getting started, guides, support tickets and contact.">
+<link rel="icon" href="assets/fixdesk.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+  <nav><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="support.html">Support</a>
+    <a class="btn primary small" href="./#download">Start free trial</a></nav>
+</div></header>
+
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Help center</div>
+  <h1 style="font-size:clamp(30px,4vw,44px)">How can we help?</h1>
+  <p class="sub">Guides for getting started and everyday work with FixDesk. The searchable knowledge base and support tickets are coming soon.</p>
+  <form class="search" onsubmit="event.preventDefault()"><input type="search" placeholder="Search the knowledge base (coming soon)" aria-label="Search" disabled><button class="btn primary" disabled>Search</button></form>
+</div></section>
+
+<section id="kb" style="padding-top:24px"><div class="wrap">
+  <h2 style="font-size:26px">Getting started</h2>
+  <div class="grid g3 kb">
+    <a class="feat" href="#contact"><div class="ic">⬇</div><h3>Install FixDesk</h3><p>Download, open, and let the setup guide check the Salesforce CLI and the AI assistant.</p></a>
+    <a class="feat" href="#contact"><div class="ic">🔗</div><h3>Connect your orgs</h3><p>Log in through the normal Salesforce page and choose what FixDesk may do in each org.</p></a>
+    <a class="feat" href="#contact"><div class="ic">📥</div><h3>Import your first story</h3><p>Connect Jira, Azure DevOps or Copado and bring a story in with one click.</p></a>
+    <a class="feat" href="#contact"><div class="ic">🗂</div><h3>Set up workspaces</h3><p>One per client: move or share orgs, set the promotion path and work tracking.</p></a>
+    <a class="feat" href="#contact"><div class="ic">🚀</div><h3>Review and deploy</h3><p>Approve proposed changes, validate, deploy with tests and a backup.</p></a>
+    <a class="feat" href="#contact"><div class="ic">🧪</div><h3>Tests and evidence</h3><p>Run tests with screenshots and get the Word evidence document for the story.</p></a>
+  </div>
+  <p class="fine" style="margin-top:16px">Full articles are being written – until then, the in-app help (the <b>?</b> button) covers every screen.</p>
+</div></section>
+
+<section id="tickets" class="alt"><div class="wrap split">
+  <div>
+    <div class="kicker">Support tickets <span class="soon">COMING SOON</span></div>
+    <h2 style="font-size:28px">Raise a ticket and follow it</h2>
+    <p class="sub">Soon you will be able to open a support ticket from here or from inside FixDesk, attach screenshots and follow the answer. Until then, please email us.</p>
+  </div>
+  <div class="panel" id="contact">
+    <h3 style="margin-top:0">Contact us</h3>
+    <p>Questions, a problem, or interested in the Team edition?</p>
+    <p><a class="btn primary" href="mailto:support@cloudeation.net">✉ support@cloudeation.net</a></p>
+    <p class="fine">We usually reply within one business day. Please include your FixDesk version (Settings › About) and, for a problem, what you were doing.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+    <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
+  <div><h4>Product</h4><a href="./#features">Features</a><a href="./#pricing">Pricing</a></div>
+  <div><h4>Support</h4><a href="#kb">Getting started</a><a href="#tickets">Support tickets<span class="soon">SOON</span></a><a href="#contact">Contact</a></div>
+  <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
