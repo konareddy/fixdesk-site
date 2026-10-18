@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixDesk Security &amp; privacy</title>
+<meta name="description" content="How FixDesk by Cloudeation keeps your Salesforce orgs and data safe: it runs on your computer, every change passes FixDesk's own checks, and nothing is sent to Cloudeation.">
+<link rel="icon" href="assets/fixdesk.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+  <nav><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="security.html">Security</a><a href="support.html">Support</a>
+    <a class="btn primary small" href="./#download">Start free trial</a></nav>
+</div></header>
+
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Security &amp; privacy</div>
+  <h1 style="font-size:clamp(30px,4vw,44px)">Your orgs stay yours</h1>
+  <p class="sub">FixDesk runs on your own computer. Nothing changes in a Salesforce org without passing FixDesk's checks – and your approval.
+    Here is exactly how it works, in plain words.</p>
+</div></section>
+
+<section style="padding-top:24px"><div class="wrap">
+  <div class="grid g3">
+    <div class="feat"><div class="ic">💻</div><h3>It runs on your computer</h3>
+      <p>FixDesk is an app on your Mac. Its server only listens on your own computer (127.0.0.1) and refuses requests that arrive under any other address,
+        so a web page can't reach it. Issues, attachments, test evidence and backups are kept in your own data folder.</p></div>
+    <div class="feat"><div class="ic">🔑</div><h3>No passwords stored</h3>
+      <p>Salesforce logins use the official Salesforce CLI on your computer – FixDesk never sees or stores your Salesforce password.
+        Jira and Azure DevOps tokens are kept in your system's secure password store (Keychain).</p></div>
+    <div class="feat"><div class="ic">📵</div><h3>Nothing sent to Cloudeation</h3>
+      <p>FixDesk doesn't send your org data, issues or usage to Cloudeation. License keys are checked on your computer (they are signed), so there's no
+        "phone home". The feature-usage counts FixDesk keeps stay in your data folder.</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="kicker">Changes to your orgs</div>
+  <h2>Every change goes through FixDesk's checks</h2>
+  <p class="sub">These checks are built into FixDesk itself – the AI can't skip them.</p>
+  <div class="grid g4">
+    <div class="feat"><div class="ic">🚦</div><h3>A rule for every org</h3><p>Each org is <b>read</b>, <b>data</b> or <b>deploy</b> – or blocked. New orgs start read-only.</p></div>
+    <div class="feat"><div class="ic">🏭</div><h3>Production guard</h3><p>Deploying or loading data to a production org needs its name typed to confirm, and Apex needs tests.</p></div>
+    <div class="feat"><div class="ic">💾</div><h3>Backups first</h3><p>The current version is saved before every deploy, and the values of records before an update or delete – so it can be put back.</p></div>
+    <div class="feat"><div class="ic">🧾</div><h3>Full history</h3><p>Every deployment, data load, rule change and Apex run is recorded: what, where, when and who.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap split">
+  <div>
+    <div class="kicker">The AI</div>
+    <h2>The AI proposes. You decide.</h2>
+    <ul class="checks">
+      <li>The AI reads your orgs to find the cause – it works within Salesforce topics only.</li>
+      <li>Code and configuration fixes are proposed for your review; nothing is deployed until you approve and start it.</li>
+      <li>Record changes it suggests wait for your permission.</li>
+      <li>It runs on your own AI subscription, on your computer. What it reads to help you (the issue, code, query results) goes to your AI provider under that subscription's terms – not to Cloudeation.</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3 style="margin-top:0">The AI console</h3>
+    <p>FixDesk includes an optional console (a terminal on your computer) for advanced users. It's <b>hidden by default</b> – you never need it to use FixDesk:
+      the AI server starts from its own button.</p>
+    <p>Companies can <b>lock the console off</b> (Settings › General) so nobody can open or type into it.</p>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="kicker">Where FixDesk connects</div>
+  <h2>Only where you point it</h2>
+  <table class="sec-table">
+    <tr><td><b>Your Salesforce orgs</b></td><td>through the Salesforce CLI login you made</td></tr>
+    <tr><td><b>Jira / Azure DevOps</b></td><td>only if you connect them, to read and import your stories</td></tr>
+    <tr><td><b>Your AI provider</b></td><td>through your own AI subscription on your computer</td></tr>
+    <tr><td><b>Salesforce's public status page</b></td><td>to show whether your org's instance has an incident (only the instance name is sent)</td></tr>
+  </table>
+  <p class="fine" style="margin-top:16px">Questions from your security team? Email <a href="mailto:kona@cloudeation.net?subject=FixDesk%20security">kona@cloudeation.net</a> – we're happy to go through it.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="logo" href="./"><img src="assets/fixdesk.png" alt=""><span>FixDesk<small>by Cloudeation</small></span></a>
+    <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
+  <div><h4>Product</h4><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="security.html">Security &amp; privacy</a></div>
+  <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#contact">Contact</a></div>
+  <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
