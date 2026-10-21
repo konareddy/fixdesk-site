@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EagleDesk – AI-assisted Salesforce fixes, from issue to deployment</title>
-<meta name="description" content="EagleDesk by Cloudeation: bring in a Salesforce issue from Jira, Azure DevOps or Copado, let AI find the root cause and propose the fix, review it, deploy it safely and test it with evidence.">
+<title>EagleDesk – fix the Salesforce story, prove it in every org</title>
+<meta name="description" content="EagleDesk by Cloudeation is the AI workbench for the Salesforce developer fixing the story: understand the code, review the fix block by block, prove it with tests in every org and know when it's ready to promote – on top of Copado, Gearset, DevOps Center or whatever pipeline your project already uses.">
 <meta property="og:title" content="EagleDesk by Cloudeation">
-<meta property="og:description" content="AI-assisted Salesforce fixes - from issue to deployment, with your review at every step.">
+<meta property="og:description" content="Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.">
 <meta property="og:image" content="https://eagledesk.cloudeation.net/assets/eagledesk-og.png">
 <link rel="icon" href="assets/eagledesk.png">
 <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
 <header class="nav"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
   <nav>
-    <a href="#features">Features</a><a href="#how">How it works</a><a href="#workspaces">Workspaces</a><a href="#safety">Safety</a>
+    <a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#safety">Privacy</a>
     <a href="#pricing">Pricing</a><a href="security.html">Security</a><a href="support.html">Support</a>
     <a class="btn primary small" href="#download">Start free trial</a>
   </nav>
@@ -24,59 +24,101 @@
 
 <section class="hero"><div class="wrap">
   <div>
-    <span class="eyebrow">⚡ For Salesforce developers, admins and consultants</span>
-    <h1>From Salesforce issue to <em>tested fix</em> – with AI doing the legwork.</h1>
-    <p class="lead">EagleDesk brings in the user story, reads your org, explains the root cause in plain English and proposes the change.
-      You review every line, deploy along your promotion path and get test evidence ready to attach to the story.</p>
-    <div class="cta"><a class="btn primary" href="#download">Download for Mac &amp; Windows</a><a class="btn ghost" href="#how">See how it works</a></div>
-    <p class="fine">7-day free trial · no credit card · free org tools forever · runs on your computer – your org data stays with you</p>
+    <span class="eyebrow">For Salesforce developers and consultants fixing stories on real projects</span>
+    <h1>Fix the story. <em>Prove it in every org.</em></h1>
+    <p class="lead">EagleDesk is your AI workbench for everything between "story assigned" and "ready to promote":
+      understand code you didn't write, review the fix block by block, prove it with tests in each sandbox
+      and know exactly where your code is – on top of the pipeline your project already uses.</p>
+    <div class="cta"><a class="btn primary" href="#download">Download for Mac &amp; Windows</a><a class="btn ghost" href="#why">Why EagleDesk</a></div>
+    <p class="fine">7-day free trial · no credit card · runs on your computer · your AI subscription, your org logins – nothing passes through us</p>
   </div>
   <div class="mock" aria-hidden="true">
     <div class="bar"><i></i><i></i><i></i></div>
-    <div class="head"><b>EagleDesk</b><span>Issues</span><span>Ask AI</span><span>Org Browser</span><span>SOQL</span><span class="ws">● Acme Corp</span></div>
-    <div class="steps"><span>✓ Analysed</span><span>✓ Fix proposed</span><span>✓ Review 4/4</span><span>✓ Deployed to dev</span><span class="cur">● Test 4/6</span><span class="todo">○ Promote to QA</span></div>
+    <div class="head"><b>EagleDesk</b><span>myStories</span><span>Ask AI</span><span>Org Browser</span><span class="ws">● Acme Corp</span></div>
     <div class="body">
       <div class="col">
-        <div class="card"><b>US-1042 · Escalation count never updates</b><span class="pill">Jira</span> <span class="pill" style="background:#dcfce7;color:#166534">Deployed</span></div>
-        <div class="card todo"><b>☐ For you to do: 1 open</b>Give Read access to Escalated Cases · <a href="#">Open in Salesforce ↗</a></div>
-        <div class="card ai"><b>✦ Root cause</b>The handler counts Status "Priority", which this org doesn't have – and writes a field that doesn't exist.</div>
+        <div class="card"><b>US-1042 · Escalation count never updates</b><span class="pill">Copado</span> <span class="pill" style="background:#dcfce7;color:#166534">Deployed</span>
+          <div class="mk-path"><span class="mk-c ok">4/4</span><small>dev</small><span class="mk-a">→</span><span class="mk-c off"></span><small>QA</small><span class="mk-a">→</span><span class="mk-c off"></span><small>UAT</small></div>
+          <div class="mk-ready">🚀 <b>Ready to promote</b> dev → QA</div></div>
+        <div class="card ai"><b>✦ Root cause</b>The handler counts Status "Priority", which this org doesn't have – so the count is never written.</div>
       </div>
       <div class="col">
-        <div class="card"><b>CaseEscalationHandler.cls</b>
-          <div class="diff"><div class="del">- c.Status == 'Priority'</div><div class="add">+ c.Status == 'Escalated'</div><div class="add">+ acc.Escalation_Count__c = n;</div></div>
-          <span class="pill" style="background:#dcfce7;color:#166534">Approved</span></div>
-        <div class="card"><b>Test run · 11:37</b>✓ 4 passed · ✕ 1 failed · 12 screenshots · 📄 evidence.docx</div>
+        <div class="card"><b>CaseEscalationHandler.cls · change 1 of 2</b>
+          <div class="diff"><div class="del">- c.Status == 'Priority'</div><div class="add">+ c.Status == 'Escalated'</div></div>
+          <div class="mk-explain">💬 Counts the status this org really uses, so escalated cases are included.</div>
+          <span class="pill" style="background:#dcfce7;color:#166534">✓ Accepted</span></div>
+        <div class="card"><b>Tests in dev · 11:37</b>✓ 4 of 4 passed · data rolled back · 📄 evidence.docx</div>
       </div>
     </div>
   </div>
 </div></section>
 
-<section id="features"><div class="wrap">
-  <div class="kicker">Features</div>
-  <h2>Everything a Salesforce fix needs, in one desk</h2>
-  <p class="sub">No more jumping between the story, Setup, VS Code, the CLI and a Word template. EagleDesk keeps the whole fix – and its proof – together.</p>
+<section class="works"><div class="wrap">
+  <span>Works with what your project already chose:</span>
+  <b>Jira</b><b>Azure DevOps</b><b>Copado</b><b>Gearset</b><b>DevOps Center</b><b>Change sets</b><b>Your CI</b>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <div class="kicker">Why EagleDesk</div>
+  <h2>Your pipeline moves code. Nothing helps you get it right.</h2>
+  <p class="sub">Copado, Gearset and DevOps Center are good at promoting changes. But the hard part of a story happens before that:
+    working out what the old code does, finding the real cause, checking the fix, and proving it works in each org.
+    That's the part EagleDesk is for.</p>
+  <div class="mid">
+    <div class="mid-end"><b>Story assigned</b><span>from Jira, Azure DevOps or Copado</span></div>
+    <div class="mid-arrow">→</div>
+    <div class="mid-core"><small>EagleDesk – the messy middle</small>
+      <div><span>Understand</span><span>Find the cause</span><span>Review the fix</span><span>Prove it</span><span>Track every org</span></div></div>
+    <div class="mid-arrow">→</div>
+    <div class="mid-end"><b>Your pipeline promotes</b><span>Copado, Gearset, DevOps Center…</span></div>
+  </div>
   <div class="grid g3">
-    <div class="feat"><div class="ic">📥</div><h3>Stories in, one click</h3><p>Import user stories and bugs from Jira, Azure DevOps Boards or Copado – with the description, so the AI can start right away.</p></div>
-    <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything is changed.</p></div>
-    <div class="feat"><div class="ic">⇄</div><h3>Proposed changes you review</h3><p>Every change is shown side by side with what is in the org now. Approve or reject each one – nothing is deployed without you.</p></div>
-    <div class="feat"><div class="ic">🚀</div><h3>Validate and deploy safely</h3><p>Validate first, deploy with the right tests, with a backup of what was there. Follow your promotion path, including Copado.</p></div>
-    <div class="feat"><div class="ic">🧪</div><h3>Tests with evidence</h3><p>Test cases written for the change, run in the browser with screenshots, and a Word evidence document ready for the story.</p></div>
-    <div class="feat"><div class="ic">☐</div><h3>Clear next steps</h3><p>Steps only you can do become a checklist with a click-by-click guide and an "Open in Salesforce" link to the exact Setup page.</p></div>
-    <div class="feat"><div class="ic">💬</div><h3>Ask AI about your org</h3><p>Ask questions in plain English. Answers come with query results you can export – record changes wait for your approval.</p></div>
-    <div class="feat"><div class="ic">🧰</div><h3>Org tools built in</h3><p>Org Browser, SOQL, Org Compare, Data Loader and Seed Data – the everyday tools, without leaving the fix.</p></div>
-    <div class="feat"><div class="ic">📝</div><h3>Story updates written for you</h3><p>Description, root cause, resolution, acceptance criteria and test notes – drafted from the work, kept as versions.</p></div>
+    <div class="feat"><div class="ic">✅</div><h3>Proof, not just code</h3><p>Tests run in each org with evidence: passed, failed and not run, shown org by org along your promotion path. When everything has passed, the story says <b>Ready to promote</b>.</p></div>
+    <div class="feat"><div class="ic">🔌</div><h3>Your pipeline, not ours</h3><p>Keep Copado, Gearset, DevOps Center or change sets. EagleDesk works alongside them – nobody has to switch tools or approve a new platform.</p></div>
+    <div class="feat"><div class="ic">🔒</div><h3>Private by design</h3><p>It runs on your computer with your own AI subscription and your own Salesforce logins. Client code and data never pass through our servers.</p></div>
   </div>
 </div></section>
 
-<section id="how" class="alt"><div class="wrap">
+<section id="features" class="alt"><div class="wrap">
+  <div class="kicker">Features</div>
+  <h2>Everything for fixing a story, in one desk</h2>
+  <p class="sub">No more jumping between the story, Setup, VS Code, the CLI, a spreadsheet of sandboxes and a Word template.</p>
+  <div class="grid g3">
+    <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything changes.</p></div>
+    <div class="feat"><div class="ic">⇄</div><h3>Review block by block</h3><p>Every change comes with a plain-English note on what it does. Accept or reject each block, or read the whole original or proposed file with the changes highlighted.</p></div>
+    <div class="feat"><div class="ic">🧪</div><h3>Tests in every org</h3><p>Test cases written for the change and run by the AI – in the back end with data rolled back, or in the browser with screenshots – plus your Apex test classes.</p></div>
+    <div class="feat"><div class="ic">📍</div><h3>Where is my code?</h3><p>One click checks every org on your path: which has this fix, which has an older version, which has someone else's later change.</p></div>
+    <div class="feat"><div class="ic">🚀</div><h3>Ready to promote</h3><p>Code deployed and every test passed? The story says so – and a filter shows every story waiting to move to the next org.</p></div>
+    <div class="feat"><div class="ic">📄</div><h3>Evidence for QA and UAT</h3><p>A Word evidence document with steps, results and screenshots, ready to attach to the story. Story updates drafted from the work.</p></div>
+    <div class="feat"><div class="ic">☐</div><h3>Clear to-dos</h3><p>Steps only you can do become a checklist with a click-by-click guide and an "Open in Salesforce" link to the exact page.</p></div>
+    <div class="feat"><div class="ic">🛡️</div><h3>Validate and deploy safely</h3><p>Validate first or deploy straight away, with the tests you choose and a backup of what was there – to the orgs you allow.</p></div>
+    <div class="feat"><div class="ic">🧰</div><h3>Org tools built in</h3><p>Org Browser with an editor and coverage, SOQL, Org Compare, Data Loader, Seed Data, debug logs and Apex tests.</p></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
   <div class="kicker">How it works</div>
-  <h2>Five steps, and you stay in control of each one</h2>
+  <h2>Five steps. You decide at every one.</h2>
   <div class="flow">
-    <div><b>Bring in the issue</b><span>Import from Jira, Azure DevOps or Copado, or paste the request.</span></div>
-    <div><b>AI analyses</b><span>Reads the org read-only and explains the cause in plain words.</span></div>
-    <div><b>You review</b><span>See each proposed change next to the org's version. Approve or reject.</span></div>
-    <div><b>Deploy</b><span>Validate, deploy with tests and a backup, along your promotion path.</span></div>
-    <div><b>Test &amp; prove</b><span>Tests run with screenshots; the evidence document is ready to attach.</span></div>
+    <div><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado, or paste the request.</span></div>
+    <div><b>Understand it</b><span>The AI reads the org read-only and explains the cause in plain words.</span></div>
+    <div><b>Review the fix</b><span>Each change block explained, next to the org's version. Accept or reject.</span></div>
+    <div><b>Prove it</b><span>Deploy to your first org, run the tests, collect the evidence.</span></div>
+    <div><b>Hand it on</b><span>Ready to promote – your pipeline takes it to the next org, and EagleDesk tracks it there.</span></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+  <div>
+    <div class="kicker">What EagleDesk is – and isn't</div>
+    <h2>A workbench for the person fixing the story</h2>
+    <p class="sub">We're deliberately not another DevOps platform. You already have one – usually chosen by someone else.</p>
+  </div>
+  <div class="panel isnt">
+    <div><b>EagleDesk is</b>
+      <ul class="checks"><li>Your desk for understanding, fixing and proving a story</li><li>Used by one developer, today, without a procurement process</li><li>Built for consultants working across several clients</li></ul></div>
+    <div><b>EagleDesk isn't</b>
+      <ul class="crosses"><li>A pipeline, CI/CD or release tool</li><li>A replacement for Copado, Gearset or DevOps Center</li><li>A cloud service that stores your client's code</li></ul></div>
   </div>
 </div></section>
 
@@ -84,73 +126,74 @@
   <div>
     <div class="kicker">Workspaces</div>
     <h2>One workspace per client. Nothing crosses over.</h2>
-    <p class="sub">Consultants work for several clients at once. Each workspace has its own orgs, issues, AI conversations, notes, promotion path and work tracking connection.</p>
+    <p class="sub">Consultants work for several clients at once. Each workspace has its own orgs, stories, AI conversations, notes, promotion path and work tracking connection.</p>
     <ul class="checks">
       <li>Switch client in one click – every screen shows only that client's orgs and work</li>
       <li>Share an org (like a Copado org) between workspaces when you need to</li>
       <li>Own Jira, Azure DevOps or Copado connection per workspace</li>
-      <li>Checked automatically: no workspace can open another's issues or orgs</li>
+      <li>Checked automatically: no workspace can open another's stories or orgs</li>
     </ul>
   </div>
   <div class="panel">
-    <div class="wsrow"><i style="background:#16a34a"></i><b>Acme Corp</b><span>4 orgs · 12 issues</span></div>
-    <div class="wsrow"><i style="background:#5b7cfa"></i><b>Globex</b><span>6 orgs · 31 issues</span></div>
-    <div class="wsrow"><i style="background:#e8590c"></i><b>Internal</b><span>2 orgs · 3 issues</span></div>
+    <div class="wsrow"><i style="background:#16a34a"></i><b>Acme Corp</b><span>4 orgs · 12 stories</span></div>
+    <div class="wsrow"><i style="background:#5b7cfa"></i><b>Globex</b><span>6 orgs · 31 stories</span></div>
+    <div class="wsrow"><i style="background:#e8590c"></i><b>Internal</b><span>2 orgs · 3 stories</span></div>
     <p class="fine" style="margin:12px 0 0">+ New workspace – each extra workspace is $1.00/month.</p>
   </div>
 </div></section>
 
 <section id="safety" class="alt"><div class="wrap">
   <div class="kicker">Safety &amp; privacy</div>
-  <h2>Built so that nothing happens by accident</h2>
+  <h2>Safe to use on a client's orgs</h2>
   <div class="grid g4">
+    <div class="feat"><div class="ic">💻</div><h3>Runs on your computer</h3><p>Stories, files and evidence stay on your machine. Logins use the Salesforce CLI; tokens live in your system's password store.</p></div>
     <div class="feat"><div class="ic">🔒</div><h3>Read-only by default</h3><p>Every org starts read-only. Deploy and data rights are given per org, with a typed confirmation.</p></div>
-    <div class="feat"><div class="ic">🏭</div><h3>Production lock</h3><p>Production orgs can only be read or blocked – unless you deliberately turn the lock off.</p></div>
-    <div class="feat"><div class="ic">💻</div><h3>Runs on your computer</h3><p>Issues, files and evidence stay on your machine. Logins use the Salesforce CLI; tokens live in your Keychain.</p></div>
-    <div class="feat"><div class="ic">🧾</div><h3>Full history</h3><p>Every rule change, deployment and data action is logged, with a backup taken before each deploy.</p></div>
+    <div class="feat"><div class="ic">🏭</div><h3>Production lock</h3><p>Production orgs can only be read – unless you deliberately turn the lock off.</p></div>
+    <div class="feat"><div class="ic">🧾</div><h3>Nothing without you</h3><p>The AI asks before any change to an org, test data is rolled back, and every deployment and data action is logged with a backup.</p></div>
   </div>
   <p style="text-align:center;margin-top:18px"><a class="btn ghost" href="security.html">Read how EagleDesk keeps your orgs safe →</a></p>
 </div></section>
 
 <section id="pricing"><div class="wrap">
   <div class="kicker">Pricing</div>
-  <h2>Start free. Keep the tools free.</h2>
+  <h2>Priced for one developer, not a procurement process</h2>
   <p class="sub">Try everything for 7 days – no credit card. The trial starts the first time you use the AI or deploy.</p>
-  <div class="launch-strip">🎉 <b>Launch offer:</b> EagleDesk Pro for <b>$4.99/month for your first 3 months</b>, then $9.99/month. Cancel anytime.</div>
+  <div class="launch-strip">EagleDesk Pro is <b>$4.99/month</b> – or <b>$49.99/year</b> (save 16%). Cancel anytime.</div>
   <div class="grid g3">
     <div class="price"><h3>Free</h3><div class="amt">$0 <small>forever</small></div>
       <ul><li>Org Browser, SOQL &amp; SOSL, Org Compare</li><li>Object describe, where-used, permission analyzer</li><li>Debug logs, deployments, Setup changes</li><li>Know your Org – health, licenses, users, code, data, security</li><li>Every org read-only</li></ul>
       <a class="btn ghost" href="#download">Download</a></div>
-    <div class="price best"><h3>Pro <span class="tag">Launch offer</span></h3><div class="amt">$4.99 <small>/ month for 3 months</small></div>
-      <p class="fine" style="margin:-6px 0 8px">then $9.99 / month · or $99 / year</p>
-      <ul><li>Everything in Free</li><li>AI analysis, fixes and Ask AI</li><li>Validate &amp; deploy with backups</li><li>AI-run tests and test evidence</li><li>Data Loader, Seed Data, anonymous Apex</li><li>1 workspace included · extra workspaces $1 / month</li></ul>
+    <div class="price best"><h3>Pro <span class="tag">Most popular</span></h3><div class="amt">$4.99 <small>/ month</small></div>
+      <p class="fine" style="margin:-6px 0 8px">or $49.99 / year – save 16%</p>
+      <ul><li>Everything in Free</li><li>AI analysis, fixes and Ask AI</li><li>Block-by-block review, validate &amp; deploy with backups</li><li>AI-run tests, test evidence, Ready to promote</li><li>Data Loader, Seed Data, anonymous Apex</li><li>1 workspace included · extra workspaces $1 / month</li></ul>
       <a class="btn primary" href="#download">Start the 7-day trial</a></div>
     <div class="price"><h3>Team</h3><div class="amt">Let's talk</div>
-      <ul><li>Shared server for the team</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Lock the AI console off</li><li>Single sign-on</li></ul>
+      <ul><li>The whole project team on the same stories</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Lock the AI console off</li><li>Single sign-on</li></ul>
       <a class="btn ghost" href="support.html#contact">Contact us</a></div>
   </div>
-  <p class="fine" style="text-align:center;margin-top:14px">When the trial ends without a subscription, EagleDesk keeps working in free mode – your work and org settings are kept.</p>
+  <p class="fine" style="text-align:center;margin-top:14px">When the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
 </div></section>
 
 <section id="faq" class="alt"><div class="wrap">
   <div class="kicker" style="text-align:center">FAQ</div>
   <h2 style="text-align:center">Questions, answered</h2>
   <div class="faq">
-    <details><summary>Does EagleDesk change my org on its own?</summary><p>No. The AI reads the org read-only. Code and configuration changes are proposed for your review, and only deployed when you approve and start the deployment. Record changes also wait for your approval.</p></details>
-    <details><summary>Where is my data kept?</summary><p>On your computer. EagleDesk runs locally; issues, attachments, test evidence and backups are stored in your own data folder. Salesforce logins use the Salesforce CLI on your machine, and Jira / Azure DevOps tokens are kept in your system's secure password store.</p></details>
-    <details><summary>Which tools does it work with?</summary><p>Salesforce orgs (sandboxes, developer and production orgs), Jira Cloud and Data Center, Azure DevOps Boards and Copado user stories. More work tracking tools can be added.</p></details>
-    <details><summary>What do I need to run it?</summary><p>A Mac (Windows is available too), the Salesforce CLI, and an AI assistant subscription that EagleDesk connects to on your computer. The setup guide inside the app checks each one for you.</p></details>
-    <details><summary>How do workspaces work?</summary><p>A workspace keeps one client or project apart: its orgs, issues, AI conversations, notes, promotion path and work tracking connection. One workspace is included; each extra one is $1.00 per month.</p></details>
-    <details><summary>What happens after the 7-day trial?</summary><p>If you subscribe, nothing changes. If you don't, EagleDesk keeps working in free mode: the org tools stay, every org becomes read-only and the AI switches off. Your issues, history and org settings are kept – subscribe any time to switch everything back on.</p></details>
-    <details><summary>How does the launch offer work?</summary><p>Subscribe during the launch and Pro is $4.99/month for your first 3 months, then $9.99/month. We'll remind you a week before the price changes. You can also pay $99 for a year.</p></details>
+    <details><summary>Do we have to replace Copado, Gearset or DevOps Center?</summary><p>No. EagleDesk sits next to your pipeline. It imports stories from Copado, Jira or Azure DevOps, and your promotion path can use Copado, Gearset, DevOps Center, change sets or your own CI – EagleDesk tracks where the fix is and how its tests went in each org.</p></details>
+    <details><summary>Why not just use an AI coding assistant myself?</summary><p>You can – EagleDesk uses one too. What it adds is the finished workflow around it: a plain-English note for every change block, accept or reject block by block, approval before anything touches an org, tests that roll their data back, evidence QA can sign off, and a view of every org on your promotion path. Building that yourself takes far longer than a story.</p></details>
+    <details><summary>Does EagleDesk change my org on its own?</summary><p>No. The AI reads the org read-only. Code changes are proposed for your review and only deployed when you approve and start the deployment. Any other change the AI wants to make in an org waits for your approval.</p></details>
+    <details><summary>Where is my data kept?</summary><p>On your computer. EagleDesk runs locally; stories, attachments, test evidence and backups are stored in your own data folder. Salesforce logins use the Salesforce CLI on your machine, and Jira / Azure DevOps tokens are kept in your system's secure password store.</p></details>
+    <details><summary>What do I need to run it?</summary><p>A Mac or Windows PC, the Salesforce CLI, and an AI assistant subscription that EagleDesk connects to on your computer. The setup guide inside the app checks each one for you.</p></details>
+    <details><summary>How do workspaces work?</summary><p>A workspace keeps one client or project apart: its orgs, stories, AI conversations, notes, promotion path and work tracking connection. One workspace is included; each extra one is $1.00 per month.</p></details>
+    <details><summary>What happens after the 7-day trial?</summary><p>If you subscribe, nothing changes. If you don't, EagleDesk becomes read-only: you can still look at your stories, history and evidence and browse your orgs, but nothing can be changed and the AI switches off. Everything is kept – subscribe any time to switch it all back on.</p></details>
+    <details><summary>Is there a yearly plan?</summary><p>Yes: $49.99 a year instead of $4.99 a month – about two months free. Extra workspaces are $1 a month each on either plan.</p></details>
     <details><summary>Can I cancel any time?</summary><p>Yes. The subscription is monthly (or yearly if you choose). Your data stays on your computer either way.</p></details>
   </div>
 </div></section>
 
 <section id="download"><div class="wrap">
   <div class="banner">
-    <h2>Fix your next Salesforce issue with EagleDesk</h2>
-    <p>7-day free trial. Download, connect an org, import a story – and see the root cause in minutes.</p>
+    <h2>Fix your next story with EagleDesk</h2>
+    <p>7-day free trial. Download, connect an org, import a story – see the root cause in minutes and the proof by the end of the day.</p>
     <div class="cta" style="justify-content:center">
       <a class="btn primary" style="background:#fff;color:#0b2e6b" href="https://github.com/konareddy/fixdesk-site/releases/latest/download/FixDesk-mac.dmg">⬇ Download for Mac</a>
       <a class="btn primary" style="background:#fff;color:#0b2e6b" href="https://github.com/konareddy/fixdesk-site/releases/latest/download/FixDesk-windows.exe">⬇ Download for Windows</a>
@@ -167,10 +210,12 @@
 
 <footer><div class="wrap">
   <div><a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
-    <p>AI-assisted Salesforce fixes – from issue to deployment, with your review at every step.</p>
+    <p>Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.</p>
+    <p class="fine">Copado, Gearset, Jira, Azure DevOps and Salesforce are trademarks of their respective owners. EagleDesk is not affiliated with or endorsed by them.</p>
     <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
-  <div><h4>Product</h4><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#safety">Safety</a><a href="#pricing">Pricing</a><a href="security.html">Security &amp; privacy</a></div>
+  <div><h4>Product</h4><a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#pricing">Pricing</a><a href="security.html">Security &amp; privacy</a></div>
   <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#kb">Knowledge base<span class="soon">SOON</span></a><a href="support.html#tickets">Support tickets<span class="soon">SOON</span></a><a href="support.html#contact">Contact</a></div>
+  <div><h4>Legal</h4><a href="terms.html">Terms of use</a><a href="privacy.html">Privacy policy</a></div>
   <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
 </div></footer>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
