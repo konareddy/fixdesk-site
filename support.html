@@ -13,7 +13,7 @@
 
 <header class="nav"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
-  <nav><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="support.html">Support</a>
+  <nav><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="support.html">Support</a><a href="support.html#contact">Contact</a>
     <a class="btn primary small" href="./#download">Start free trial</a></nav>
 </div></header>
 
@@ -46,7 +46,11 @@
   <div class="panel" id="contact">
     <h3 style="margin-top:0">Contact us</h3>
     <p>Questions, a problem, or interested in the Team edition?</p>
-    <p><a class="btn primary" href="mailto:kona@cloudeation.net">✉ kona@cloudeation.net</a></p>
+    <p class="ct-addr"><b id="ctAddr">support@eagledesk.app</b> <button class="btn ghost small" type="button" id="ctCopy">Copy address</button></p>
+    <p class="ct-open">Write to us in:
+      <a class="btn primary small" href="mailto:support@eagledesk.app?subject=EagleDesk%20support&amp;body=Hi%2C%0A%0AWhat%20I%20was%20doing%3A%0A%0AWhat%20happened%20(or%20my%20question)%3A%0A%0AEagleDesk%20version%20(Settings%20%E2%80%BA%20About)%3A%20">✉ Your mail app</a>
+      <a class="btn ghost small" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=support@eagledesk.app&amp;su=EagleDesk%20support&amp;body=Hi%2C%0A%0AWhat%20I%20was%20doing%3A%0A%0AWhat%20happened%20(or%20my%20question)%3A%0A%0AEagleDesk%20version%20(Settings%20%E2%80%BA%20About)%3A%20" target="_blank" rel="noopener">Gmail ↗</a>
+      <a class="btn ghost small" href="https://outlook.live.com/mail/0/deeplink/compose?to=support@eagledesk.app&amp;subject=EagleDesk%20support&amp;body=Hi%2C%0A%0AWhat%20I%20was%20doing%3A%0A%0AWhat%20happened%20(or%20my%20question)%3A%0A%0AEagleDesk%20version%20(Settings%20%E2%80%BA%20About)%3A%20" target="_blank" rel="noopener">Outlook.com ↗</a></p>
     <p class="fine">We usually reply within one business day. Please include your EagleDesk version (Settings › About) and, for a problem, what you were doing.</p>
   </div>
 </div></section>
@@ -60,5 +64,8 @@
   <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
 </div></footer>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById("ctCopy").onclick = e => navigator.clipboard.writeText("support@eagledesk.app").then(() => { e.target.textContent = "Copied ✓"; setTimeout(() => e.target.textContent = "Copy address", 2000); }, () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("ctAddr")); getSelection().removeAllRanges(); getSelection().addRange(r); });
+</script>
 </body>
 </html>

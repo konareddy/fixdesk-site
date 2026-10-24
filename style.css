@@ -193,3 +193,8 @@ section.works { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .ph { background: #fef3c7; color: #92400e; border-radius: 4px; padding: 0 4px; font-weight: 600; }
 .draft { background: #fef3c7; color: #92400e; border-radius: 999px; padding: 1px 10px; font-weight: 700; }
 .legal .sec-table td { border-bottom: 1px solid var(--line); }
+
+/* Contact us: the address big enough to read and copy, then where to write the email */
+.ct-addr { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ct-addr b { font-size: 18px; user-select: all; word-break: break-all; }
+.ct-open { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
