@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: >-
-  EagleDesk Enterprise - step 2 of 2: EagleDesk in this AWS account. One ECS Fargate task behind an HTTPS load
+  EagleDesk Enterprise in your own AWS account (https://eagledesk.app). One ECS Fargate task behind an HTTPS load
   balancer; PostgreSQL on Amazon RDS (password made and kept by AWS Secrets Manager); an encrypted EFS volume for the
   working files (Salesforce CLI logins, git copies, attachments); backups copied to a versioned S3 bucket; the AI on
   this account's Amazon Bedrock. Nothing is reachable from the internet except the load balancer.
