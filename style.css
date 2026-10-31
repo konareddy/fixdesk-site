@@ -198,3 +198,16 @@ section.works { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .ct-addr { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .ct-addr b { font-size: 18px; user-select: all; word-break: break-all; }
 .ct-open { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+/* Cloud for teams waitlist */
+.soon-tag { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--fg); }
+.split-wl { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.wl { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; box-shadow: var(--shadow); }
+.wl label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 14px; }
+.wl label small { font-weight: 400; color: var(--muted); }
+.wl input, .wl select, .wl textarea { padding: 11px 13px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); font: inherit; font-weight: 400; }
+.wl .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.wl .btn { justify-content: center; }
+.wl-err { color: #c0392b; }
+.wl-done b { font-size: 18px; }
+@media (max-width: 860px) { .split-wl { grid-template-columns: minmax(0, 1fr); } }

@@ -173,11 +173,30 @@
       <p class="fine" style="margin:-6px 0 8px">or $49.99 / year – save 16%</p>
       <ul><li>Everything in Free</li><li>AI analysis, fixes and Ask AI</li><li>Block-by-block review, validate &amp; deploy with backups</li><li>AI-run tests, test evidence, Ready to promote</li><li>Data Loader, Seed Data, anonymous Apex</li><li>1 workspace included · extra workspaces $1 / month</li></ul>
       <a class="btn primary" href="#download">Start the 7-day trial</a></div>
-    <div class="price"><h3>Team</h3><div class="amt">Let's talk</div>
-      <ul><li>The whole project team on the same stories</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Lock the AI console off</li><li>Single sign-on</li></ul>
-      <a class="btn ghost" href="support.html#contact">Contact us</a></div>
+    <div class="price"><h3>Cloud for teams <span class="tag soon-tag">Coming soon</span></h3><div class="amt">Waitlist</div>
+      <ul><li>The whole project team on the same stories</li><li>Nothing to install - we host it for you</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Single sign-on</li></ul>
+      <a class="btn ghost" href="#cloud" data-goatcounter-click="waitlist-open" data-goatcounter-title="Cloud waitlist (pricing)">Join the waitlist</a></div>
   </div>
-  <p class="fine" style="text-align:center;margin-top:14px">When the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
+  <p class="fine" style="text-align:center;margin-top:14px">A larger company that needs EagleDesk in its own AWS account? <a href="support.html#contact">Ask us about EagleDesk Enterprise</a>.</p>
+  <p class="fine" style="text-align:center;margin-top:6px">When the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
+</div></section>
+
+<section id="cloud"><div class="wrap split-wl">
+  <div>
+    <div class="kicker">Cloud for teams · coming soon</div>
+    <h2>Your whole team on one EagleDesk - without running a server</h2>
+    <p class="sub" style="text-align:left;margin-left:0">We're building a hosted EagleDesk for project teams: shared stories, roles, reviews and test evidence,
+      each team in its own separate environment. Join the waitlist to hear first and help shape it.</p>
+  </div>
+  <form class="wl" id="wl" novalidate>
+    <label>Work email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>
+    <label><span>Company <small>(optional)</small></span><input name="company" autocomplete="organization"></label>
+    <label>Team size<select name="size"><option value="">Choose…</option><option>2-5</option><option>6-20</option><option>21-50</option><option>More than 50</option></select></label>
+    <label><span>Anything we should know? <small>(optional)</small></span><textarea name="note" rows="3" placeholder="e.g. we use Copado and Jira, 4 sandboxes"></textarea></label>
+    <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn primary" data-goatcounter-click="waitlist-join" data-goatcounter-title="Cloud waitlist joined">Join the waitlist</button>
+    <p class="fine" id="wlMsg" role="status">We'll only use your email to tell you about EagleDesk Cloud. <a href="privacy.html">Privacy policy</a></p>
+  </form>
 </div></section>
 
 <section id="faq" class="alt"><div class="wrap">
@@ -223,5 +242,21 @@
   <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
 </div></footer>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script>
+// Cloud for teams waitlist -> the feedback Worker (an issue labelled "waitlist" in the private repo)
+document.getElementById("wl").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById("wlMsg"), btn = f.querySelector("button");
+  const data = Object.fromEntries(new FormData(f));
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email || "")) { msg.textContent = "Please enter a valid email address."; msg.className = "fine wl-err"; return; }
+  btn.disabled = true; btn.textContent = "Joining…";
+  try {
+    const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
+    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll write to ${data.email.replace(/[<>&"]/g, "")} when EagleDesk Cloud opens.</p></div>`;
+  } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Join the waitlist"; }
+});
+</script>
 </body>
 </html>
