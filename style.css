@@ -220,3 +220,16 @@ section.works { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .price.ent { border: 2px solid #b8892b; box-shadow: var(--shadow); }
 .tag.ent-tag { background: #b8892b; }
 @media (max-width: 640px) { .ed dl { grid-template-columns: 1fr; gap: 2px; } .ed dd { margin-bottom: 8px; } }
+
+/* Hero: the two editions side by side */
+.hero-eds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 26px 0 12px; }
+.he { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--brand); border-radius: 14px; padding: 16px 16px 18px; box-shadow: var(--shadow); }
+.he.ent { border-top-color: #b8892b; }
+.he-k { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--brand); }
+.he.ent .he-k { color: #b8892b; }
+.he b { font-size: 16px; }
+.he-d { color: var(--muted); font-size: 14px; line-height: 1.45; flex: 1; }
+.he-p { font-size: 14px; color: var(--muted); margin: 6px 0 10px; }
+.he-p b { color: var(--fg); font-size: 20px; }
+.he .btn { justify-content: center; text-align: center; }
+@media (max-width: 640px) { .hero-eds { grid-template-columns: 1fr; } }
