@@ -211,3 +211,12 @@ section.works { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .wl-err { color: #c0392b; }
 .wl-done b { font-size: 18px; }
 @media (max-width: 860px) { .split-wl { grid-template-columns: minmax(0, 1fr); } }
+
+/* Editions: Personal vs Enterprise */
+.ed .who { color: var(--muted); margin: 6px 0 0; font-size: 15px; }
+.ed dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 18px 0 24px; font-size: 15px; flex: 1; align-content: start; }
+.ed dt { color: var(--muted); font-weight: 600; }
+.ed dd { margin: 0; }
+.price.ent { border: 2px solid #b8892b; box-shadow: var(--shadow); }
+.tag.ent-tag { background: #b8892b; }
+@media (max-width: 640px) { .ed dl { grid-template-columns: 1fr; gap: 2px; } .ed dd { margin-bottom: 8px; } }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EagleDesk – fix the Salesforce story, prove it in every org</title>
 <link rel="canonical" href="https://eagledesk.app/">
-<meta name="description" content="EagleDesk by Cloudeation is the AI workbench for the Salesforce developer fixing the story: understand the code, review the fix block by block, prove it with tests in every org and know when it's ready to promote – on top of Copado, Gearset, DevOps Center or whatever pipeline your project already uses.">
+<meta name="description" content="EagleDesk by Cloudeation is the AI workbench for the Salesforce developer fixing the story: understand the code, review the fix block by block, prove it with tests in every org and know when it's ready to promote – on top of Copado, Gearset, DevOps Center or whatever pipeline your project already uses. Personal edition for Mac and Windows; Enterprise edition for teams in their own AWS account, on AWS Marketplace.">
 <meta property="og:title" content="EagleDesk by Cloudeation">
 <meta property="og:description" content="Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.">
 <meta property="og:image" content="https://eagledesk.app/assets/eagledesk-og.png">
@@ -19,7 +19,7 @@
 <header class="nav"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
   <nav>
-    <a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#safety">Privacy</a>
+    <a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#editions">Editions</a><a href="#safety">Privacy</a>
     <a href="#pricing">Pricing</a><a href="security.html">Security</a><a href="support.html">Support</a><a href="support.html#contact">Contact</a>
     <a class="btn primary small" href="#download">Start free trial</a>
   </nav>
@@ -34,6 +34,7 @@
       and know exactly where your code is – on top of the pipeline your project already uses.</p>
     <div class="cta"><a class="btn primary" href="#download">Download for Mac &amp; Windows</a><a class="btn ghost" href="#why">Why EagleDesk</a></div>
     <p class="fine">7-day free trial · no credit card · runs on your computer · your AI subscription, your org logins – nothing passes through us</p>
+    <p class="fine">For a whole team? <a href="#editions">EagleDesk Enterprise</a> runs in your own AWS account – on AWS Marketplace.</p>
   </div>
   <div class="mock" aria-hidden="true">
     <div class="bar"><i></i><i></i><i></i></div>
@@ -114,7 +115,47 @@
   </div>
 </div></section>
 
-<section class="alt"><div class="wrap split">
+<section id="editions" class="alt"><div class="wrap">
+  <div class="kicker">Editions</div>
+  <h2>Two editions. The same workbench.</h2>
+  <p class="sub">Personal is for one developer or consultant, on their own computer. Enterprise is for the whole project team,
+    running in your company's own AWS account. Both find the root cause, propose the fix, review it block by block and prove it in every org.</p>
+  <div class="grid g2">
+    <div class="price ed">
+      <h3>EagleDesk Personal</h3>
+      <p class="who">For one Salesforce developer or consultant</p>
+      <dl>
+        <dt>Runs on</dt><dd>Your Mac or Windows PC</dd>
+        <dt>AI</dt><dd>Your own AI assistant subscription, on your computer</dd>
+        <dt>Salesforce</dt><dd>Your logins through the Salesforce CLI</dd>
+        <dt>Your data</dt><dd>Stays on your computer</dd>
+        <dt>Clients</dt><dd>One workspace per client – $1/month for each extra one</dd>
+        <dt>Price</dt><dd><b>Free</b> tools, or <b>Pro $4.99/month</b> ($49.99/year)</dd>
+        <dt>Get started</dt><dd>Download – 7-day free trial, no credit card</dd>
+      </dl>
+      <a class="btn primary" href="#download">Download for Mac &amp; Windows</a>
+    </div>
+    <div class="price ed ent">
+      <h3>EagleDesk Enterprise <span class="tag ent-tag">For teams</span></h3>
+      <p class="who">For Salesforce project teams and their security review</p>
+      <dl>
+        <dt>Runs in</dt><dd>Your own AWS account – Amazon ECS Fargate, RDS for PostgreSQL, EFS and S3 backups, set up by one CloudFormation template in about 15 minutes</dd>
+        <dt>AI</dt><dd>Amazon Bedrock in your account and Region – no AI keys to manage</dd>
+        <dt>Sign-in</dt><dd>Single sign-on (OpenID Connect: Okta, Microsoft Entra ID, Google, Ping, Auth0, Cognito); each person uses their own Salesforce login</dd>
+        <dt>Team</dt><dd>Users, roles and permissions, assign stories, audit log, workspaces per project</dd>
+        <dt>Your data</dt><dd>Code, org data and conversations never leave your AWS account</dd>
+        <dt>Price</dt><dd><b>$49 per user / month</b> or <b>$490 per user / year</b>, on your AWS bill</dd>
+        <dt>Get started</dt><dd>Subscribe on AWS Marketplace, then deploy the template</dd>
+      </dl>
+      <div class="cta" style="margin:0">
+        <a class="btn primary" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="marketplace-editions" data-goatcounter-title="AWS Marketplace (editions)">View on AWS Marketplace</a>
+        <a class="btn ghost" href="https://youtu.be/muPQuJJ3TYs" data-goatcounter-click="enterprise-video" data-goatcounter-title="Enterprise video (editions)">▶ Watch the 3-minute tour</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap split">
   <div>
     <div class="kicker">What EagleDesk is – and isn't</div>
     <h2>A workbench for the person fixing the story</h2>
@@ -122,13 +163,13 @@
   </div>
   <div class="panel isnt">
     <div><b>EagleDesk is</b>
-      <ul class="checks"><li>Your desk for understanding, fixing and proving a story</li><li>Used by one developer, today, without a procurement process</li><li>Built for consultants working across several clients</li></ul></div>
+      <ul class="checks"><li>Your desk for understanding, fixing and proving a story</li><li>Used by one developer today (Personal) – or the whole team in your own AWS account (Enterprise)</li><li>Built for consultants working across several clients</li></ul></div>
     <div><b>EagleDesk isn't</b>
       <ul class="crosses"><li>A pipeline, CI/CD or release tool</li><li>A replacement for Copado, Gearset or DevOps Center</li><li>A cloud service that stores your client's code</li></ul></div>
   </div>
 </div></section>
 
-<section id="workspaces"><div class="wrap split">
+<section id="workspaces" class="alt"><div class="wrap split">
   <div>
     <div class="kicker">Workspaces</div>
     <h2>One workspace per client. Nothing crosses over.</h2>
@@ -148,7 +189,7 @@
   </div>
 </div></section>
 
-<section id="safety" class="alt"><div class="wrap">
+<section id="safety"><div class="wrap">
   <div class="kicker">Safety &amp; privacy</div>
   <h2>Safe to use on a client's orgs</h2>
   <div class="grid g4">
@@ -160,11 +201,12 @@
   <p style="text-align:center;margin-top:18px"><a class="btn ghost" href="security.html">Read how EagleDesk keeps your orgs safe →</a></p>
 </div></section>
 
-<section id="pricing"><div class="wrap">
+<section id="pricing" class="alt"><div class="wrap">
   <div class="kicker">Pricing</div>
-  <h2>Priced for one developer, not a procurement process</h2>
-  <p class="sub">Try everything for 7 days – no credit card. The trial starts the first time you use the AI or deploy.</p>
-  <div class="launch-strip">EagleDesk Pro is <b>$4.99/month</b> – or <b>$49.99/year</b> (save 16%). Cancel anytime.</div>
+  <h2>Priced for one developer – or the whole team</h2>
+  <p class="sub">Personal: try everything for 7 days – no credit card. The trial starts the first time you use the AI or deploy.
+    Enterprise: per user, through your AWS bill.</p>
+  <div class="launch-strip">Personal Pro is <b>$4.99/month</b> – or <b>$49.99/year</b> (save 16%). Enterprise is <b>$49/user/month</b> – or <b>$490/user/year</b>.</div>
   <div class="grid g3">
     <div class="price"><h3>Free</h3><div class="amt">$0 <small>forever</small></div>
       <ul><li>Org Browser, SOQL &amp; SOSL, Org Compare</li><li>Object describe, where-used, permission analyzer</li><li>Debug logs, deployments, Setup changes</li><li>Know your Org – health, licenses, users, code, data, security</li><li>Every org read-only</li></ul>
@@ -173,12 +215,14 @@
       <p class="fine" style="margin:-6px 0 8px">or $49.99 / year – save 16%</p>
       <ul><li>Everything in Free</li><li>AI analysis, fixes and Ask AI</li><li>Block-by-block review, validate &amp; deploy with backups</li><li>AI-run tests, test evidence, Ready to promote</li><li>Data Loader, Seed Data, anonymous Apex</li><li>1 workspace included · extra workspaces $1 / month</li></ul>
       <a class="btn primary" href="#download">Start the 7-day trial</a></div>
-    <div class="price"><h3>Cloud for teams <span class="tag soon-tag">Coming soon</span></h3><div class="amt">Waitlist</div>
-      <ul><li>The whole project team on the same stories</li><li>Nothing to install - we host it for you</li><li>Users, roles and permissions</li><li>Queues, architect review, delivery planning</li><li>Single sign-on</li></ul>
-      <a class="btn ghost" href="#cloud" data-goatcounter-click="waitlist-open" data-goatcounter-title="Cloud waitlist (pricing)">Join the waitlist</a></div>
+    <div class="price ent"><h3>Enterprise <span class="tag ent-tag">For teams</span></h3><div class="amt">$49 <small>/ user / month</small></div>
+      <p class="fine" style="margin:-6px 0 8px">or $490 / user / year · on your AWS bill</p>
+      <ul><li>Everything in Pro, for the whole team</li><li>Runs in your own AWS account</li><li>AI through Amazon Bedrock in your account</li><li>Single sign-on, per-person Salesforce logins</li><li>Users, roles, permissions and audit log</li></ul>
+      <a class="btn primary" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="marketplace-pricing" data-goatcounter-title="AWS Marketplace (pricing)">View on AWS Marketplace</a></div>
   </div>
-  <p class="fine" style="text-align:center;margin-top:14px">A larger company that needs EagleDesk in its own AWS account? <a href="support.html#contact">Ask us about EagleDesk Enterprise</a>.</p>
-  <p class="fine" style="text-align:center;margin-top:6px">When the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
+  <p class="fine" style="text-align:center;margin-top:14px">Enterprise: AWS infrastructure and Amazon Bedrock usage are billed by AWS to your account (about $3 a day at the smallest sizes, plus AI use). Questions or a private offer? <a href="support.html#contact">Talk to us</a>.
+    Rather we hosted it for you? <a href="#cloud">Join the Cloud for teams waitlist</a>.</p>
+  <p class="fine" style="text-align:center;margin-top:6px">Personal: when the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
 </div></section>
 
 <section id="cloud"><div class="wrap split-wl">
@@ -203,11 +247,14 @@
   <div class="kicker" style="text-align:center">FAQ</div>
   <h2 style="text-align:center">Questions, answered</h2>
   <div class="faq">
+    <details><summary>What's the difference between Personal and Enterprise?</summary><p>The workbench is the same. Personal runs on one person's Mac or Windows PC with their own AI subscription. Enterprise runs in your company's own AWS account for the whole team: AI through Amazon Bedrock, single sign-on, each person's own Salesforce login, users and roles, and a shared database of stories, reviews and test evidence.</p></details>
+    <details><summary>How do we buy and set up Enterprise?</summary><p>Subscribe on <a href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi">AWS Marketplace</a> for the number of users you need, monthly or yearly – it's billed on your AWS bill. Then deploy the CloudFormation template in your account (about 15 minutes) and sign in as the first administrator. The usage instructions on the listing walk through each step, and we help with the setup.</p></details>
+    <details><summary>Does Enterprise send our data to Cloudeation?</summary><p>No. Enterprise runs entirely in your AWS account – the server, database, files and backups – and the AI runs through Amazon Bedrock in your account and Region. Your code, org data and conversations never leave it; EagleDesk only checks your AWS Marketplace contract through AWS License Manager.</p></details>
     <details><summary>Do we have to replace Copado, Gearset or DevOps Center?</summary><p>No. EagleDesk sits next to your pipeline. It imports stories from Copado, Jira or Azure DevOps, and your promotion path can use Copado, Gearset, DevOps Center, change sets or your own CI – EagleDesk tracks where the fix is and how its tests went in each org.</p></details>
     <details><summary>Why not just use an AI coding assistant myself?</summary><p>You can – EagleDesk uses one too. What it adds is the finished workflow around it: a plain-English note for every change block, accept or reject block by block, approval before anything touches an org, tests that roll their data back, evidence QA can sign off, and a view of every org on your promotion path. Building that yourself takes far longer than a story.</p></details>
     <details><summary>Does EagleDesk change my org on its own?</summary><p>No. The AI reads the org read-only. Code changes are proposed for your review and only deployed when you approve and start the deployment. Any other change the AI wants to make in an org waits for your approval.</p></details>
-    <details><summary>Where is my data kept?</summary><p>On your computer. EagleDesk runs locally; stories, attachments, test evidence and backups are stored in your own data folder. Salesforce logins use the Salesforce CLI on your machine, and Jira / Azure DevOps tokens are kept in your system's secure password store.</p></details>
-    <details><summary>What do I need to run it?</summary><p>A Mac or Windows PC, the Salesforce CLI, and an AI assistant subscription that EagleDesk connects to on your computer. The setup guide inside the app checks each one for you.</p></details>
+    <details><summary>Where is my data kept?</summary><p>Personal: on your computer. EagleDesk runs locally; stories, attachments, test evidence and backups are stored in your own data folder. Salesforce logins use the Salesforce CLI on your machine, and Jira / Azure DevOps tokens are kept in your system's secure password store. Enterprise: in your own AWS account.</p></details>
+    <details><summary>What do I need to run it?</summary><p>Personal: a Mac or Windows PC, the Salesforce CLI, and an AI assistant subscription that EagleDesk connects to on your computer. The setup guide inside the app checks each one for you. Enterprise: an AWS account with Amazon Bedrock access in your Region.</p></details>
     <details><summary>How do workspaces work?</summary><p>A workspace keeps one client or project apart: its orgs, stories, AI conversations, notes, promotion path and work tracking connection. One workspace is included; each extra one is $1.00 per month.</p></details>
     <details><summary>What happens after the 7-day trial?</summary><p>If you subscribe, nothing changes. If you don't, EagleDesk becomes read-only: you can still look at your stories, history and evidence and browse your orgs, but nothing can be changed and the AI switches off. Everything is kept – subscribe any time to switch it all back on.</p></details>
     <details><summary>Is there a yearly plan?</summary><p>Yes: $49.99 a year instead of $4.99 a month – about two months free. Extra workspaces are $1 a month each on either plan.</p></details>
@@ -236,7 +283,7 @@
     <p>Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.</p>
     <p class="fine">Copado, Gearset, Jira, Azure DevOps and Salesforce are trademarks of their respective owners. EagleDesk is not affiliated with or endorsed by them.</p>
     <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
-  <div><h4>Product</h4><a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#pricing">Pricing</a><a href="security.html">Security &amp; privacy</a></div>
+  <div><h4>Product</h4><a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#editions">Personal &amp; Enterprise</a><a href="#pricing">Pricing</a><a href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi">Enterprise on AWS Marketplace</a><a href="security.html">Security &amp; privacy</a></div>
   <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#kb">Knowledge base<span class="soon">SOON</span></a><a href="support.html#tickets">Support tickets<span class="soon">SOON</span></a><a href="support.html#contact">Contact</a></div>
   <div><h4>Legal</h4><a href="terms.html">Terms of use</a><a href="privacy.html">Privacy policy</a></div>
   <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
