@@ -10,158 +10,45 @@
 <meta property="og:description" content="Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.">
 <meta property="og:image" content="https://eagledesk.app/assets/eagledesk-og.png">
 <link rel="icon" href="assets/eagledesk.png">
-<link rel="stylesheet" href="style.css?v=20261103">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=20261103b">
+<link rel="stylesheet" href="home.css?v=20261103b">
 <!-- Visitor stats: GoatCounter (no cookies, no personal data) - pages, referrers, ad campaigns (utm_*), download clicks -->
 <script data-goatcounter="https://eagledesk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body>
+<body class="home2">
 
-<header class="nav"><div class="wrap">
+<header class="nav dark"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
   <nav>
-    <a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#editions">Editions</a><a href="#pricing">Pricing</a>
+    <a href="#editions">Editions</a><a href="#product">Product</a><a href="#features">Features</a><a href="#pricing">Pricing</a>
     <a href="security.html">Security</a><a href="support.html">Support</a>
-    <a class="btn primary small" href="#download">Start free trial</a>
+    <a class="btn small demo-open" href="#demo" data-goatcounter-click="demo-open-nav" data-goatcounter-title="Watch demo (menu)">▶ Watch demo</a>
+    <a class="btn primary small" href="#book" data-goatcounter-click="book-nav" data-goatcounter-title="Book a demo (menu)">Book a demo</a>
   </nav>
 </div></header>
 
-<section class="hero"><div class="wrap">
-  <div>
-    <span class="eyebrow">For Salesforce developers, consultants and project teams</span>
-    <h1>Fix the story. <em>Prove it in every org.</em></h1>
-    <p class="lead">EagleDesk is your AI workbench for everything between "story assigned" and "ready to promote":
-      understand code you didn't write, review the fix block by block, prove it with tests in each sandbox
-      and know exactly where your code is – on top of the pipeline your project already uses.</p>
-    <div class="hero-eds">
-      <div class="he">
-        <span class="he-k">Personal</span>
-        <b>For one developer or consultant</b>
-        <span class="he-d">On your Mac or Windows PC, with your own AI subscription</span>
-        <span class="he-p"><b>$4.99</b>/month · 7-day free trial</span>
-        <a class="btn primary small" href="#download" data-goatcounter-click="hero-personal" data-goatcounter-title="Hero: Personal download">Download for Mac &amp; Windows</a>
-      </div>
-      <div class="he ent">
-        <span class="he-k">Enterprise</span>
-        <b>For the whole project team</b>
-        <span class="he-d">In your own AWS account, with Amazon Bedrock and single sign-on</span>
-        <span class="he-p"><b>$49</b>/user/month · AWS billing</span>
-        <a class="btn primary small" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="hero-enterprise" data-goatcounter-title="Hero: AWS Marketplace">View on AWS Marketplace</a>
-      </div>
-    </div>
-    <p class="fine"><a href="#editions">Compare the editions →</a> · Your code and org data never pass through us</p>
+<section class="hero2"><div class="wrap">
+  <a class="hero-pill" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="hero-pill" data-goatcounter-title="Hero pill: AWS Marketplace"><span>New</span> EagleDesk Enterprise is on AWS Marketplace →</a>
+  <h1>Fix the Salesforce story.<br><em>Prove it in every org.</em></h1>
+  <p class="lead2">The AI workbench for everything between "story assigned" and "ready to promote": find the root cause,
+    review the fix block by block, deploy safely and prove it with tests in every sandbox – on top of the pipeline you already use.</p>
+  <div class="cta2">
+    <a class="btn primary big demo-open" href="#demo" data-goatcounter-click="demo-open-hero" data-goatcounter-title="Watch demo (hero)">▶ Watch the 3-minute demo</a>
+    <a class="btn light big" href="#book" data-goatcounter-click="book-hero" data-goatcounter-title="Book a demo (hero)">Book a live demo</a>
   </div>
-  <div class="mock" aria-hidden="true">
-    <div class="bar"><i></i><i></i><i></i></div>
-    <div class="head"><b>EagleDesk</b><span>myStories</span><span>Ask AI</span><span>Org Browser</span><span class="ws">● Acme Corp</span></div>
-    <div class="body">
-      <div class="col">
-        <div class="card"><b>US-1042 · Escalation count never updates</b><span class="pill">Copado</span> <span class="pill" style="background:#dcfce7;color:#166534">Deployed</span>
-          <div class="mk-path"><span class="mk-c ok">4/4</span><small>dev</small><span class="mk-a">→</span><span class="mk-c off"></span><small>QA</small><span class="mk-a">→</span><span class="mk-c off"></span><small>UAT</small></div>
-          <div class="mk-ready">🚀 <b>Ready to promote</b> dev → QA</div></div>
-        <div class="card ai"><b>✦ Root cause</b>The handler counts Status "Priority", which this org doesn't have – so the count is never written.</div>
-      </div>
-      <div class="col">
-        <div class="card"><b>CaseEscalationHandler.cls · change 1 of 2</b>
-          <div class="diff"><div class="del">- c.Status == 'Priority'</div><div class="add">+ c.Status == 'Escalated'</div></div>
-          <div class="mk-explain">💬 Counts the status this org really uses, so escalated cases are included.</div>
-          <span class="pill" style="background:#dcfce7;color:#166534">✓ Accepted</span></div>
-        <div class="card"><b>Tests in dev · 11:37</b>✓ 4 of 4 passed · data rolled back · 📄 evidence.docx</div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="works"><div class="wrap">
-  <span>Works with what your project already chose:</span>
+  <p class="hero-sub">Or <a href="#download">download for Mac &amp; Windows</a> – 7-day free trial, no credit card</p>
+  <a class="hero-shot demo-open" href="#demo" aria-label="Play the demo video" data-goatcounter-click="demo-open-shot" data-goatcounter-title="Watch demo (screenshot)">
+    <img src="assets/shots/05-review.jpg" alt="EagleDesk reviewing a fix block by block" width="1600" height="900">
+    <span class="play"><i>▶</i><b>Watch the demo · 3 min</b></span>
+  </a>
+  <div class="works2"><span>Works with what your project already chose:</span>
   <b>Jira</b><b>Azure DevOps</b><b>Copado</b><b>Gearset</b><b>DevOps Center</b><b>Change sets</b><b>Your CI</b>
+</div></div>
 </div></section>
 
-<section id="tour" class="tour"><div class="wrap">
-  <div class="kicker" style="text-align:center">See it in action</div>
-  <h2 style="text-align:center">From story to deployed fix – in the real app</h2>
-  <div class="sh" id="sh" aria-roledescription="carousel">
-    <div class="sh-track" id="shTrack">
-      <figure class="sh-slide"><img src="assets/shots/01-import.jpg" alt="EagleDesk – Bring in the story" width="1600" height="900">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado – or paste the request.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Root cause in plain English</b><span>The AI reads the org read-only and explains exactly where and why it fails.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/04-proposed.jpg" alt="EagleDesk – The proposed fix, explained" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>The proposed fix, explained</b><span>Where the bug is and what each change does, step by step.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review block by block" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Review block by block</b><span>A plain-English note on every change. Accept or reject each block.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/06-validate.jpg" alt="EagleDesk – Validate before you deploy" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Validate before you deploy</b><span>Pick the tests, see every step that will happen, type the org name to confirm.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Deployed – with a backup" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Deployed – with a backup</b><span>Live progress, tests run, and the previous version backed up first.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/08-users.jpg" alt="EagleDesk – Users and profiles" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed ent">Enterprise</span><b>Users and profiles</b><span>Everyone on the team with their own sign-in, profile and permissions.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Single sign-on" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed ent">Enterprise</span><b>Single sign-on</b><span>Okta, Microsoft Entra ID, Google, Ping, Auth0 or Amazon Cognito over OpenID Connect.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/10-bedrock.jpg" alt="EagleDesk – AI on Amazon Bedrock" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed ent">Enterprise</span><b>AI on Amazon Bedrock</b><span>The AI runs in your own AWS account – billed on your AWS bill, no AI keys.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/11-contract.jpg" alt="EagleDesk – Your AWS Marketplace contract" width="1600" height="900" loading="lazy">
-        <figcaption><span class="sh-ed ent">Enterprise</span><b>Your AWS Marketplace contract</b><span>Seats come straight from your contract, checked with AWS License Manager.</span></figcaption></figure>
-    </div>
-    <button class="sh-nav prev" id="shPrev" aria-label="Previous picture">‹</button>
-    <button class="sh-nav next" id="shNext" aria-label="Next picture">›</button>
-  </div>
-  <div class="sh-dots" id="shDots"><button aria-label="Picture 1"></button><button aria-label="Picture 2"></button><button aria-label="Picture 3"></button><button aria-label="Picture 4"></button><button aria-label="Picture 5"></button><button aria-label="Picture 6"></button><button aria-label="Picture 7"></button><button aria-label="Picture 8"></button><button aria-label="Picture 9"></button><button aria-label="Picture 10"></button></div>
-</div></section>
-
-<section id="why"><div class="wrap">
-  <div class="kicker">Why EagleDesk</div>
-  <h2>Your pipeline moves code. Nothing helps you get it right.</h2>
-  <p class="sub">Copado, Gearset and DevOps Center are good at promoting changes. But the hard part of a story happens before that:
-    working out what the old code does, finding the real cause, checking the fix, and proving it works in each org.
-    That's the part EagleDesk is for.</p>
-  <div class="mid">
-    <div class="mid-end"><b>Story assigned</b><span>from Jira, Azure DevOps or Copado</span></div>
-    <div class="mid-arrow">→</div>
-    <div class="mid-core"><small>EagleDesk – the messy middle</small>
-      <div><span>Understand</span><span>Find the cause</span><span>Review the fix</span><span>Prove it</span><span>Track every org</span></div></div>
-    <div class="mid-arrow">→</div>
-    <div class="mid-end"><b>Your pipeline promotes</b><span>Copado, Gearset, DevOps Center…</span></div>
-  </div>
-  <div class="grid g3">
-    <div class="feat"><div class="ic">✅</div><h3>Proof, not just code</h3><p>Tests run in each org with evidence: passed, failed and not run, shown org by org along your promotion path. When everything has passed, the story says <b>Ready to promote</b>.</p></div>
-    <div class="feat"><div class="ic">🔌</div><h3>Your pipeline, not ours</h3><p>Keep Copado, Gearset, DevOps Center or change sets. EagleDesk works alongside them – nobody has to switch tools or approve a new platform.</p></div>
-    <div class="feat"><div class="ic">🔒</div><h3>Private by design</h3><p>It runs on your computer with your own AI subscription and your own Salesforce logins. Client code and data never pass through our servers.</p></div>
-  </div>
-</div></section>
-
-<section id="features" class="alt"><div class="wrap">
-  <div class="kicker">Features</div>
-  <h2>Everything for fixing a story, in one desk</h2>
-  <p class="sub">No more jumping between the story, Setup, VS Code, the CLI, a spreadsheet of sandboxes and a Word template.</p>
-  <div class="grid g3">
-    <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything changes.</p></div>
-    <div class="feat"><div class="ic">🧭</div><h3>The whole story in 30 seconds</h3><p>Each story's Overview leads with the problem, the root cause and the proposed fix, then the real state: files reviewed, alerts, validation, tests. Diagnosis, evidence, solution and the code walk-through are one click away.</p></div>
-    <div class="feat"><div class="ic">💬</div><h3>Ask AI beside every page</h3><p>Ask about your org without leaving what you're doing – it knows the class, Flow, object or query on screen. Keep it docked, expand it or float it; answers come with highlighted code and query results.</p></div>
-    <div class="feat"><div class="ic">⇄</div><h3>Review block by block</h3><p>Every change comes with a plain-English note on what it does. Accept or reject each block, or read the whole original or proposed file with the changes highlighted.</p></div>
-    <div class="feat"><div class="ic">🧪</div><h3>Tests in every org</h3><p>Test cases written for the change and run by the AI – in the back end with data rolled back, or in the browser with screenshots – plus your Apex test classes.</p></div>
-    <div class="feat"><div class="ic">📍</div><h3>Where is my code?</h3><p>One click checks every org on your path: which has this fix, which has an older version, which has someone else's later change.</p></div>
-    <div class="feat"><div class="ic">🚀</div><h3>Ready to promote</h3><p>Code deployed and every test passed? The story says so – and a filter shows every story waiting to move to the next org.</p></div>
-    <div class="feat"><div class="ic">📄</div><h3>Evidence for QA and UAT</h3><p>A Word evidence document with steps, results and screenshots, ready to attach to the story. Story updates drafted from the work.</p></div>
-    <div class="feat"><div class="ic">☐</div><h3>Clear to-dos</h3><p>Steps only you can do become a checklist with a click-by-click guide and an "Open in Salesforce" link to the exact page.</p></div>
-    <div class="feat"><div class="ic">🛡️</div><h3>Validate and deploy safely</h3><p>Validate first or deploy straight away, with the tests you choose and a backup of what was there – to the orgs you allow.</p></div>
-    <div class="feat"><div class="ic">🧰</div><h3>Org tools built in</h3><p>Org Browser with an editor and coverage, SOQL, Org Compare, Data Loader, Seed Data, debug logs and Apex tests.</p></div>
-    <div class="feat"><div class="ic">🎓</div><h3>Learn Salesforce your way</h3><p>Courses the AI builds for your level in each topic – administration, Flow, Apex and more – with lessons, exercises and points, in the way you like to learn.</p></div>
-  </div>
-</div></section>
-
-<section id="how"><div class="wrap">
-  <div class="kicker">How it works</div>
-  <h2>Five steps. You decide at every one.</h2>
-  <div class="flow">
-    <div><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado, or paste the request.</span></div>
-    <div><b>Understand it</b><span>The AI reads the org read-only and explains the cause in plain words.</span></div>
-    <div><b>Review the fix</b><span>Each change block explained, next to the org's version. Accept or reject.</span></div>
-    <div><b>Prove it</b><span>Deploy to your first org, run the tests, collect the evidence.</span></div>
-    <div><b>Hand it on</b><span>Ready to promote – your pipeline takes it to the next org, and EagleDesk tracks it there.</span></div>
-  </div>
-</div></section>
-
-<section id="editions" class="alt"><div class="wrap">
+<section id="editions" class="ed-sec"><div class="wrap">
   <div class="kicker">Editions</div>
   <h2>Two editions. The same workbench.</h2>
   <p class="sub">Personal is for one developer or consultant, on their own computer. Enterprise is for the whole project team,
@@ -201,17 +88,107 @@
   </div>
 </div></section>
 
-<section><div class="wrap split">
-  <div>
-    <div class="kicker">What EagleDesk is – and isn't</div>
-    <h2>A workbench for the person fixing the story</h2>
-    <p class="sub">We're deliberately not another DevOps platform. You already have one – usually chosen by someone else.</p>
+<section id="how" class="steps-sec"><div class="wrap">
+  <div class="panel2">
+    <h2>From story to production – with proof at every step</h2>
+    <div class="steps4">
+      <div><span class="si" style="--c:#5956e9">✦</span><h3>Understand</h3><p>The AI reads the org read-only and explains the root cause in plain English.</p></div>
+      <div><span class="si" style="--c:#e8590c">⇄</span><h3>Fix</h3><p>A proposed fix with a note on every block. Accept or reject each one.</p></div>
+      <div><span class="si" style="--c:#16a34a">✓</span><h3>Prove</h3><p>Validate, deploy with a backup, run tests in each org and collect the evidence.</p></div>
+      <div><span class="si" style="--c:#0ea5e9">🚀</span><h3>Promote</h3><p>Ready to promote – your pipeline moves it on, EagleDesk tracks where it is.</p></div>
+    </div>
   </div>
-  <div class="panel isnt">
-    <div><b>EagleDesk is</b>
-      <ul class="checks"><li>Your desk for understanding, fixing and proving a story</li><li>Used by one developer today (Personal) – or the whole team in your own AWS account (Enterprise)</li><li>Built for consultants working across several clients</li></ul></div>
-    <div><b>EagleDesk isn't</b>
-      <ul class="crosses"><li>A pipeline, CI/CD or release tool</li><li>A replacement for Copado, Gearset or DevOps Center</li><li>A cloud service that stores your client's code</li></ul></div>
+</div></section>
+
+<section id="product"><div class="wrap">
+  <div class="frow">
+    <div class="ftext"><div class="kicker">Understand</div><h2>Root cause in plain English</h2><p>Import the story from Jira, Azure DevOps or Copado. The AI reads the org – code, flows, fields and data – read-only, and tells you exactly where and why it fails.</p><ul class="checks"><li>Real records and code lines, not guesses</li><li>Nothing in the org changes</li><li>Ask follow-up questions beside every page</li></ul></div>
+    <div class="fimg"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy"></div>
+  </div>
+  <div class="frow flip">
+    <div class="ftext"><div class="kicker">Fix</div><h2>Review the fix block by block</h2><p>Every change comes with a plain-English note on what it does, next to the org's own version. Accept or reject each block – nothing is deployed without you.</p><ul class="checks"><li>Before / after for every file</li><li>Approve file by file</li><li>Read the whole original or proposed file</li></ul></div>
+    <div class="fimg"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review the fix block by block" width="1600" height="900" loading="lazy"></div>
+  </div>
+  <div class="frow">
+    <div class="ftext"><div class="kicker">Prove</div><h2>Validate, deploy and prove it</h2><p>Validate first with the tests you choose. Deploy with a backup of what was there, watch every step live, then run tests in each org and hand QA the evidence.</p><ul class="checks"><li>Typed confirmation for every org</li><li>Backup before every deploy</li><li>Word evidence document for QA and UAT</li></ul></div>
+    <div class="fimg"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Validate, deploy and prove it" width="1600" height="900" loading="lazy"></div>
+  </div>
+  <div class="frow flip">
+    <div class="ftext"><div class="kicker ent-k">Enterprise</div><h2>Built for your security review</h2><p>EagleDesk Enterprise runs in your own AWS account with Amazon Bedrock. Everyone signs in with single sign-on and uses their own Salesforce login.</p><ul class="checks"><li>Okta, Entra ID, Google, Ping, Auth0, Cognito</li><li>Users, roles, permissions and audit log</li><li>Code and org data never leave your account</li></ul></div>
+    <div class="fimg"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Built for your security review" width="1600" height="900" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section id="tour" class="tour"><div class="wrap">
+  <div class="kicker" style="text-align:center">See it in action</div>
+  <h2 style="text-align:center">From story to deployed fix – in the real app</h2>
+  <div class="sh" id="sh" aria-roledescription="carousel">
+    <div class="sh-track" id="shTrack">
+      <figure class="sh-slide"><img src="assets/shots/01-import.jpg" alt="EagleDesk – Bring in the story" width="1600" height="900">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado – or paste the request.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Root cause in plain English</b><span>The AI reads the org read-only and explains exactly where and why it fails.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/04-proposed.jpg" alt="EagleDesk – The proposed fix, explained" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>The proposed fix, explained</b><span>Where the bug is and what each change does, step by step.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review block by block" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Review block by block</b><span>A plain-English note on every change. Accept or reject each block.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/06-validate.jpg" alt="EagleDesk – Validate before you deploy" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Validate before you deploy</b><span>Pick the tests, see every step that will happen, type the org name to confirm.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Deployed – with a backup" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Deployed – with a backup</b><span>Live progress, tests run, and the previous version backed up first.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/08-users.jpg" alt="EagleDesk – Users and profiles" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Users and profiles</b><span>Everyone on the team with their own sign-in, profile and permissions.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Single sign-on" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Single sign-on</b><span>Okta, Microsoft Entra ID, Google, Ping, Auth0 or Amazon Cognito over OpenID Connect.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/10-bedrock.jpg" alt="EagleDesk – AI on Amazon Bedrock" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>AI on Amazon Bedrock</b><span>The AI runs in your own AWS account – billed on your AWS bill, no AI keys.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/11-contract.jpg" alt="EagleDesk – Your AWS Marketplace contract" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Your AWS Marketplace contract</b><span>Seats come straight from your contract, checked with AWS License Manager.</span></figcaption></figure>
+    </div>
+    <button class="sh-nav prev" id="shPrev" aria-label="Previous picture">‹</button>
+    <button class="sh-nav next" id="shNext" aria-label="Next picture">›</button>
+  </div>
+  <div class="sh-dots" id="shDots"><button aria-label="Picture 1"></button><button aria-label="Picture 2"></button><button aria-label="Picture 3"></button><button aria-label="Picture 4"></button><button aria-label="Picture 5"></button><button aria-label="Picture 6"></button><button aria-label="Picture 7"></button><button aria-label="Picture 8"></button><button aria-label="Picture 9"></button><button aria-label="Picture 10"></button></div>
+</div></section>
+
+<section id="why" class="alt"><div class="wrap">
+  <div class="kicker">Why EagleDesk</div>
+  <h2>Your pipeline moves code. Nothing helps you get it right.</h2>
+  <p class="sub">Copado, Gearset and DevOps Center are good at promoting changes. But the hard part of a story happens before that:
+    working out what the old code does, finding the real cause, checking the fix, and proving it works in each org.
+    That's the part EagleDesk is for.</p>
+  <div class="mid">
+    <div class="mid-end"><b>Story assigned</b><span>from Jira, Azure DevOps or Copado</span></div>
+    <div class="mid-arrow">→</div>
+    <div class="mid-core"><small>EagleDesk – the messy middle</small>
+      <div><span>Understand</span><span>Find the cause</span><span>Review the fix</span><span>Prove it</span><span>Track every org</span></div></div>
+    <div class="mid-arrow">→</div>
+    <div class="mid-end"><b>Your pipeline promotes</b><span>Copado, Gearset, DevOps Center…</span></div>
+  </div>
+  <div class="grid g3">
+    <div class="feat"><div class="ic">✅</div><h3>Proof, not just code</h3><p>Tests run in each org with evidence: passed, failed and not run, shown org by org along your promotion path. When everything has passed, the story says <b>Ready to promote</b>.</p></div>
+    <div class="feat"><div class="ic">🔌</div><h3>Your pipeline, not ours</h3><p>Keep Copado, Gearset, DevOps Center or change sets. EagleDesk works alongside them – nobody has to switch tools or approve a new platform.</p></div>
+    <div class="feat"><div class="ic">🔒</div><h3>Private by design</h3><p>It runs on your computer with your own AI subscription and your own Salesforce logins. Client code and data never pass through our servers.</p></div>
+  </div>
+</div></section>
+
+<section id="features"><div class="wrap">
+  <div class="kicker">Features</div>
+  <h2>Everything for fixing a story, in one desk</h2>
+  <p class="sub">No more jumping between the story, Setup, VS Code, the CLI, a spreadsheet of sandboxes and a Word template.</p>
+  <div class="grid g3">
+    <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything changes.</p></div>
+    <div class="feat"><div class="ic">🧭</div><h3>The whole story in 30 seconds</h3><p>Each story's Overview leads with the problem, the root cause and the proposed fix, then the real state: files reviewed, alerts, validation, tests. Diagnosis, evidence, solution and the code walk-through are one click away.</p></div>
+    <div class="feat"><div class="ic">💬</div><h3>Ask AI beside every page</h3><p>Ask about your org without leaving what you're doing – it knows the class, Flow, object or query on screen. Keep it docked, expand it or float it; answers come with highlighted code and query results.</p></div>
+    <div class="feat"><div class="ic">⇄</div><h3>Review block by block</h3><p>Every change comes with a plain-English note on what it does. Accept or reject each block, or read the whole original or proposed file with the changes highlighted.</p></div>
+    <div class="feat"><div class="ic">🧪</div><h3>Tests in every org</h3><p>Test cases written for the change and run by the AI – in the back end with data rolled back, or in the browser with screenshots – plus your Apex test classes.</p></div>
+    <div class="feat"><div class="ic">📍</div><h3>Where is my code?</h3><p>One click checks every org on your path: which has this fix, which has an older version, which has someone else's later change.</p></div>
+    <div class="feat"><div class="ic">🚀</div><h3>Ready to promote</h3><p>Code deployed and every test passed? The story says so – and a filter shows every story waiting to move to the next org.</p></div>
+    <div class="feat"><div class="ic">📄</div><h3>Evidence for QA and UAT</h3><p>A Word evidence document with steps, results and screenshots, ready to attach to the story. Story updates drafted from the work.</p></div>
+    <div class="feat"><div class="ic">☐</div><h3>Clear to-dos</h3><p>Steps only you can do become a checklist with a click-by-click guide and an "Open in Salesforce" link to the exact page.</p></div>
+    <div class="feat"><div class="ic">🛡️</div><h3>Validate and deploy safely</h3><p>Validate first or deploy straight away, with the tests you choose and a backup of what was there – to the orgs you allow.</p></div>
+    <div class="feat"><div class="ic">🧰</div><h3>Org tools built in</h3><p>Org Browser with an editor and coverage, SOQL, Org Compare, Data Loader, Seed Data, debug logs and Apex tests.</p></div>
+    <div class="feat"><div class="ic">🎓</div><h3>Learn Salesforce your way</h3><p>Courses the AI builds for your level in each topic – administration, Flow, Apex and more – with lessons, exercises and points, in the way you like to learn.</p></div>
   </div>
 </div></section>
 
@@ -245,6 +222,30 @@
     <div class="feat"><div class="ic">🧾</div><h3>Nothing without you</h3><p>The AI asks before any change to an org, test data is rolled back, and every deployment and data action is logged with a backup.</p></div>
   </div>
   <p style="text-align:center;margin-top:18px"><a class="btn ghost" href="security.html">Read how EagleDesk keeps your orgs safe →</a></p>
+</div></section>
+
+<section id="book" class="demo-band"><div class="wrap split-wl">
+  <div>
+    <div class="kicker light">Book a demo</div>
+    <h2>A live demo for your whole team</h2>
+    <p class="sub">Bring your developers, admins, release managers and IT. Our Salesforce and AWS specialists walk your team through EagleDesk on a real story – from root cause to tested, deployed fix.</p>
+    <ul class="demo-what">
+      <li><b>Tailored to your project</b><span>Your work tracking, your pipeline (Copado, Gearset, DevOps Center) and your promotion path</span></li>
+      <li><b>Security and architecture review</b><span>How Enterprise runs in your AWS account: Bedrock, single sign-on, data and access</span></li>
+      <li><b>Rollout and pricing</b><span>Users, setup help and AWS Marketplace contract options for your team</span></li>
+    </ul>
+    <a class="btn light demo-open" href="#demo" data-goatcounter-click="demo-open-band" data-goatcounter-title="Watch demo (book band)">▶ Watch the 3-minute demo first</a>
+  </div>
+  <form class="wl" id="bk" novalidate>
+    <h3 class="bk-h">Request a team demo</h3>
+    <label>Work email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>
+    <label><span>Company <small>(optional)</small></span><input name="company" autocomplete="organization"></label>
+    <label>Team size<select name="size"><option value="">Choose…</option><option>1-5 people</option><option>6-20 people</option><option>21-50 people</option><option>More than 50</option></select></label>
+    <label><span>What should we cover? <small>(optional)</small></span><textarea name="note" rows="3" placeholder="e.g. Enterprise on AWS, Copado + Jira, 4 sandboxes; who will join; good times for your team"></textarea></label>
+    <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn primary" data-goatcounter-click="book-send" data-goatcounter-title="Demo requested">Request a team demo</button>
+    <p class="fine" id="bkMsg" role="status">The EagleDesk team replies within one business day to schedule it. <a href="privacy.html">Privacy policy</a></p>
+  </form>
 </div></section>
 
 <section id="pricing" class="alt"><div class="wrap">
@@ -324,6 +325,14 @@
   </div>
 </div></section>
 
+<dialog id="demo" class="demo-dlg" aria-label="EagleDesk demo video">
+  <div class="dd-head"><b>EagleDesk demo</b>
+    <div class="dd-tabs"><button data-v="muPQuJJ3TYs" class="on">Full tour · 3 min</button><button data-v="T03oUWPciLg">Your first story</button><button data-v="bYzRkuiszmI">Review the fix</button></div>
+    <button class="dd-x" aria-label="Close">✕</button></div>
+  <div class="dd-frame"><iframe title="EagleDesk demo" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+  <p class="fine dd-more">More videos on the <a href="https://www.youtube.com/@eagledeskapp" target="_blank" rel="noopener">EagleDesk YouTube channel ↗</a></p>
+</dialog>
+
 <footer><div class="wrap">
   <div><a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
     <p>Fix the Salesforce story. Prove it in every org. On top of the pipeline you already have.</p>
@@ -364,6 +373,62 @@ document.getElementById("wl").addEventListener("submit", async e => {
   ["mouseleave", "focusout"].forEach(e => sh.addEventListener(e, () => paused = false));
   mark(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!paused && !document.hidden) go(i + 1); }, 5000);
 })();
+</script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script>
+// Cloud for teams waitlist -> the feedback Worker (an issue labelled "waitlist" in the private repo)
+document.getElementById("wl").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById("wlMsg"), btn = f.querySelector("button");
+  const data = Object.fromEntries(new FormData(f));
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email || "")) { msg.textContent = "Please enter a valid email address."; msg.className = "fine wl-err"; return; }
+  btn.disabled = true; btn.textContent = "Joining…";
+  try {
+    const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
+    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll write to ${data.email.replace(/[<>&"]/g, "")} when EagleDesk Cloud opens.</p></div>`;
+  } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Join the waitlist"; }
+});
+</script>
+<script>
+// "See it in action": scroll-snap strip that moves on by itself every 5 s (pauses on hover/touch, off with reduced motion)
+(() => { const t = document.getElementById("shTrack"), dots = [...document.querySelectorAll("#shDots button")], n = dots.length;
+  let i = 0, paused = false;
+  const go = k => { i = (k + n) % n; t.scrollTo({ left: i * t.clientWidth, behavior: "smooth" }); };
+  const mark = () => dots.forEach((d, k) => d.classList.toggle("on", k === i));
+  t.addEventListener("scroll", () => { i = Math.round(t.scrollLeft / t.clientWidth); mark(); }, { passive: true });
+  dots.forEach((d, k) => d.onclick = () => go(k));
+  document.getElementById("shPrev").onclick = () => go(i - 1); document.getElementById("shNext").onclick = () => go(i + 1);
+  const sh = document.getElementById("sh"); ["mouseenter", "touchstart", "focusin"].forEach(e => sh.addEventListener(e, () => paused = true, { passive: true }));
+  ["mouseleave", "focusout"].forEach(e => sh.addEventListener(e, () => paused = false));
+  mark(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!paused && !document.hidden) go(i + 1); }, 5000);
+})();
+</script>
+<script>
+// Watch the demo: one dialog, the video loads only when opened (youtube-nocookie) and stops on close
+(() => { const d = document.getElementById("demo"), f = d.querySelector("iframe"), tabs = [...d.querySelectorAll(".dd-tabs button")];
+  const play = v => { f.src = `https://www.youtube-nocookie.com/embed/${v}?autoplay=1&rel=0&modestbranding=1`; tabs.forEach(t => t.classList.toggle("on", t.dataset.v === v)); };
+  document.querySelectorAll(".demo-open").forEach(a => a.addEventListener("click", e => { e.preventDefault(); d.showModal(); play(tabs.find(t => t.classList.contains("on")).dataset.v); }));
+  tabs.forEach(t => t.onclick = () => play(t.dataset.v));
+  d.querySelector(".dd-x").onclick = () => d.close();
+  d.addEventListener("click", e => { if (e.target === d) d.close(); });
+  d.addEventListener("close", () => { f.src = "about:blank"; });
+})();
+// Book a demo -> the feedback Worker (an issue labelled "demo" in the private repo)
+document.getElementById("bk").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById("bkMsg"), btn = f.querySelector("button");
+  const data = Object.assign(Object.fromEntries(new FormData(f)), { kind: "demo" });
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email || "")) { msg.textContent = "Please enter a valid email address."; msg.className = "fine wl-err"; return; }
+  btn.disabled = true; btn.textContent = "Sending…";
+  try {
+    const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
+    f.innerHTML = `<div class="wl-done"><b>Thanks – your team demo request is in.</b><p>The EagleDesk team will write to ${data.email.replace(/[<>&"]/g, "")} within one business day to schedule it.</p></div>`;
+  } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Request a team demo"; }
+});
 </script>
 </body>
 </html>
