@@ -252,3 +252,8 @@ section.works { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .sh-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; }
 .sh-dots button.on { background: var(--brand); width: 24px; border-radius: 999px; }
 @media (max-width: 640px) { .sh-nav { display: none; } .sh-slide figcaption { padding: 10px 14px 12px; } .sh-slide figcaption b { font-size: 15px; } }
+
+/* nav: one line, never wrapping */
+.nav nav a, .nav .btn { white-space: nowrap; }
+@media (max-width: 1080px) { .nav nav { gap: 16px; } .nav nav a[href="security.html"], .nav nav a[href="support.html"] { display: none; } }
+.tour { padding-top: 56px; }
