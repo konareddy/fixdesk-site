@@ -19,7 +19,7 @@
 <header class="nav"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
   <nav>
-    <a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#editions">Editions</a><a href="#safety">Privacy</a>
+    <a href="#why">Why EagleDesk</a><a href="#tour">See it</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#editions">Editions</a><a href="#safety">Privacy</a>
     <a href="#pricing">Pricing</a><a href="security.html">Security</a><a href="support.html">Support</a><a href="support.html#contact">Contact</a>
     <a class="btn primary small" href="#download">Start free trial</a>
   </nav>
@@ -69,6 +69,38 @@
       </div>
     </div>
   </div>
+</div></section>
+
+<section id="tour" class="tour"><div class="wrap">
+  <div class="kicker" style="text-align:center">See it in action</div>
+  <h2 style="text-align:center">From story to deployed fix – in the real app</h2>
+  <div class="sh" id="sh" aria-roledescription="carousel">
+    <div class="sh-track" id="shTrack">
+      <figure class="sh-slide"><img src="assets/shots/01-import.jpg" alt="EagleDesk – Bring in the story" width="1600" height="900">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado – or paste the request.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Root cause in plain English</b><span>The AI reads the org read-only and explains exactly where and why it fails.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/04-proposed.jpg" alt="EagleDesk – The proposed fix, explained" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>The proposed fix, explained</b><span>Where the bug is and what each change does, step by step.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review block by block" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Review block by block</b><span>A plain-English note on every change. Accept or reject each block.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/06-validate.jpg" alt="EagleDesk – Validate before you deploy" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Validate before you deploy</b><span>Pick the tests, see every step that will happen, type the org name to confirm.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Deployed – with a backup" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Deployed – with a backup</b><span>Live progress, tests run, and the previous version backed up first.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/08-users.jpg" alt="EagleDesk – Users and profiles" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Users and profiles</b><span>Everyone on the team with their own sign-in, profile and permissions.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Single sign-on" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Single sign-on</b><span>Okta, Microsoft Entra ID, Google, Ping, Auth0 or Amazon Cognito over OpenID Connect.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/10-bedrock.jpg" alt="EagleDesk – AI on Amazon Bedrock" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>AI on Amazon Bedrock</b><span>The AI runs in your own AWS account – billed on your AWS bill, no AI keys.</span></figcaption></figure>
+      <figure class="sh-slide"><img src="assets/shots/11-contract.jpg" alt="EagleDesk – Your AWS Marketplace contract" width="1600" height="900" loading="lazy">
+        <figcaption><span class="sh-ed ent">Enterprise</span><b>Your AWS Marketplace contract</b><span>Seats come straight from your contract, checked with AWS License Manager.</span></figcaption></figure>
+    </div>
+    <button class="sh-nav prev" id="shPrev" aria-label="Previous picture">‹</button>
+    <button class="sh-nav next" id="shNext" aria-label="Next picture">›</button>
+  </div>
+  <div class="sh-dots" id="shDots"><button aria-label="Picture 1"></button><button aria-label="Picture 2"></button><button aria-label="Picture 3"></button><button aria-label="Picture 4"></button><button aria-label="Picture 5"></button><button aria-label="Picture 6"></button><button aria-label="Picture 7"></button><button aria-label="Picture 8"></button><button aria-label="Picture 9"></button><button aria-label="Picture 10"></button></div>
 </div></section>
 
 <section class="works"><div class="wrap">
@@ -318,6 +350,20 @@ document.getElementById("wl").addEventListener("submit", async e => {
     f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll write to ${data.email.replace(/[<>&"]/g, "")} when EagleDesk Cloud opens.</p></div>`;
   } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Join the waitlist"; }
 });
+</script>
+<script>
+// "See it in action": scroll-snap strip that moves on by itself every 5 s (pauses on hover/touch, off with reduced motion)
+(() => { const t = document.getElementById("shTrack"), dots = [...document.querySelectorAll("#shDots button")], n = dots.length;
+  let i = 0, paused = false;
+  const go = k => { i = (k + n) % n; t.scrollTo({ left: i * t.clientWidth, behavior: "smooth" }); };
+  const mark = () => dots.forEach((d, k) => d.classList.toggle("on", k === i));
+  t.addEventListener("scroll", () => { i = Math.round(t.scrollLeft / t.clientWidth); mark(); }, { passive: true });
+  dots.forEach((d, k) => d.onclick = () => go(k));
+  document.getElementById("shPrev").onclick = () => go(i - 1); document.getElementById("shNext").onclick = () => go(i + 1);
+  const sh = document.getElementById("sh"); ["mouseenter", "touchstart", "focusin"].forEach(e => sh.addEventListener(e, () => paused = true, { passive: true }));
+  ["mouseleave", "focusout"].forEach(e => sh.addEventListener(e, () => paused = false));
+  mark(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!paused && !document.hidden) go(i + 1); }, 5000);
+})();
 </script>
 </body>
 </html>
