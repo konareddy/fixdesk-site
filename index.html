@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="style.css?v=20261103b">
-<link rel="stylesheet" href="home.css?v=20261103b">
+<link rel="stylesheet" href="home.css?v=20261103c">
 <!-- Visitor stats: GoatCounter (no cookies, no personal data) - pages, referrers, ad campaigns (utm_*), download clicks -->
 <script data-goatcounter="https://eagledesk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -21,7 +21,8 @@
 
 <header class="nav dark"><div class="wrap">
   <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
-  <nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  <nav id="navMenu">
     <a href="#editions">Editions</a><a href="#product">Product</a><a href="#features">Features</a><a href="#pricing">Pricing</a>
     <a href="security.html">Security</a><a href="support.html">Support</a>
     <a class="btn small demo-open" href="#demo" data-goatcounter-click="demo-open-nav" data-goatcounter-title="Watch demo (menu)">▶ Watch demo</a>
@@ -35,12 +36,12 @@
   <p class="lead2">The AI workbench for everything between "story assigned" and "ready to promote": find the root cause,
     review the fix block by block, deploy safely and prove it with tests in every sandbox – on top of the pipeline you already use.</p>
   <div class="cta2">
-    <a class="btn primary big demo-open" href="#demo" data-goatcounter-click="demo-open-hero" data-goatcounter-title="Watch demo (hero)">▶ Watch the 3-minute demo</a>
-    <a class="btn light big" href="#book" data-goatcounter-click="book-hero" data-goatcounter-title="Book a demo (hero)">Book a live demo</a>
+    <a class="btn primary big demo-open" href="#demo" data-goatcounter-click="demo-open-hero" data-goatcounter-title="Watch demo (hero)">▶ Watch demo</a>
+    <a class="btn light big" href="#book" data-goatcounter-click="book-hero" data-goatcounter-title="Book a demo (hero)">Book a demo</a>
   </div>
   <p class="hero-sub">Or <a href="#download">download for Mac &amp; Windows</a> – 7-day free trial, no credit card</p>
   <a class="hero-shot demo-open" href="#demo" aria-label="Play the demo video" data-goatcounter-click="demo-open-shot" data-goatcounter-title="Watch demo (screenshot)">
-    <img src="assets/shots/05-review.jpg" alt="EagleDesk reviewing a fix block by block" width="1600" height="900">
+    <picture><source srcset="assets/shots/05-review.webp" type="image/webp"><img src="assets/shots/05-review.jpg" alt="EagleDesk reviewing a fix block by block" width="1600" height="900"></picture>
     <span class="play"><i>▶</i><b>Watch the demo · 3 min</b></span>
   </a>
   <div class="works2"><span>Works with what your project already chose:</span>
@@ -82,7 +83,7 @@
       </dl>
       <div class="cta" style="margin:0">
         <a class="btn primary" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="marketplace-editions" data-goatcounter-title="AWS Marketplace (editions)">View on AWS Marketplace</a>
-        <a class="btn ghost" href="https://youtu.be/muPQuJJ3TYs" data-goatcounter-click="enterprise-video" data-goatcounter-title="Enterprise video (editions)">▶ Watch the 3-minute tour</a>
+        <a class="btn ghost demo-open" href="#demo" data-goatcounter-click="demo-open-editions" data-goatcounter-title="Watch demo (editions)">▶ Watch demo</a>
       </div>
     </div>
   </div>
@@ -103,19 +104,35 @@
 <section id="product"><div class="wrap">
   <div class="frow">
     <div class="ftext"><div class="kicker">Understand</div><h2>Root cause in plain English</h2><p>Import the story from Jira, Azure DevOps or Copado. The AI reads the org – code, flows, fields and data – read-only, and tells you exactly where and why it fails.</p><ul class="checks"><li>Real records and code lines, not guesses</li><li>Nothing in the org changes</li><li>Ask follow-up questions beside every page</li></ul></div>
-    <div class="fimg"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy"></div>
+    <div class="fimg"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/02-root-cause.webp" type="image/webp"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy"></picture></button></div>
   </div>
   <div class="frow flip">
     <div class="ftext"><div class="kicker">Fix</div><h2>Review the fix block by block</h2><p>Every change comes with a plain-English note on what it does, next to the org's own version. Accept or reject each block – nothing is deployed without you.</p><ul class="checks"><li>Before / after for every file</li><li>Approve file by file</li><li>Read the whole original or proposed file</li></ul></div>
-    <div class="fimg"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review the fix block by block" width="1600" height="900" loading="lazy"></div>
+    <div class="fimg"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/05-review.webp" type="image/webp"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review the fix block by block" width="1600" height="900" loading="lazy"></picture></button></div>
   </div>
   <div class="frow">
     <div class="ftext"><div class="kicker">Prove</div><h2>Validate, deploy and prove it</h2><p>Validate first with the tests you choose. Deploy with a backup of what was there, watch every step live, then run tests in each org and hand QA the evidence.</p><ul class="checks"><li>Typed confirmation for every org</li><li>Backup before every deploy</li><li>Word evidence document for QA and UAT</li></ul></div>
-    <div class="fimg"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Validate, deploy and prove it" width="1600" height="900" loading="lazy"></div>
+    <div class="fimg"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/07-deployed.webp" type="image/webp"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Validate, deploy and prove it" width="1600" height="900" loading="lazy"></picture></button></div>
   </div>
   <div class="frow flip">
     <div class="ftext"><div class="kicker ent-k">Enterprise</div><h2>Built for your security review</h2><p>EagleDesk Enterprise runs in your own AWS account with Amazon Bedrock. Everyone signs in with single sign-on and uses their own Salesforce login.</p><ul class="checks"><li>Okta, Entra ID, Google, Ping, Auth0, Cognito</li><li>Users, roles, permissions and audit log</li><li>Code and org data never leave your account</li></ul></div>
-    <div class="fimg"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Built for your security review" width="1600" height="900" loading="lazy"></div>
+    <div class="fimg"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/09-sso.webp" type="image/webp"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Built for your security review" width="1600" height="900" loading="lazy"></picture></button></div>
+  </div>
+</div></section>
+
+<section id="who" class="alt"><div class="wrap">
+  <div class="kicker" style="text-align:center">Who it's for</div>
+  <h2 style="text-align:center">Built for the people who fix and ship Salesforce</h2>
+  <div class="grid g3 who">
+    <div class="feat"><div class="ic">👩‍💻</div><h3>Salesforce developers</h3><p class="who-task">"I've been handed a story in code I didn't write."</p>
+      <ul class="checks"><li>Root cause explained before you change anything</li><li>A proposed fix you review block by block</li><li>Tests in each org, with evidence for QA</li></ul>
+      <p class="who-out">From story assigned to <b>Ready to promote</b> in one place.</p></div>
+    <div class="feat"><div class="ic">🏛️</div><h3>Architects &amp; release managers</h3><p class="who-task">"I need to know what's changing – and where it is."</p>
+      <ul class="checks"><li>Every change explained and approved before it deploys</li><li>Where is my code: each fix's version in every org</li><li>Validate-first deploys with backups; Enterprise adds an audit log</li></ul>
+      <p class="who-out">Fewer surprises between dev, QA, UAT and production.</p></div>
+    <div class="feat"><div class="ic">🤝</div><h3>Consultancies &amp; delivery teams</h3><p class="who-task">"We work for several clients at once."</p>
+      <ul class="checks"><li>One workspace per client – orgs, stories and tracking kept apart</li><li>Evidence documents ready for the client's QA and UAT</li><li>Enterprise: users, roles and single sign-on for the whole team</li></ul>
+      <p class="who-out">Every client's work separate, and every fix proven.</p></div>
   </div>
 </div></section>
 
@@ -124,25 +141,25 @@
   <h2 style="text-align:center">From story to deployed fix – in the real app</h2>
   <div class="sh" id="sh" aria-roledescription="carousel">
     <div class="sh-track" id="shTrack">
-      <figure class="sh-slide"><img src="assets/shots/01-import.jpg" alt="EagleDesk – Bring in the story" width="1600" height="900">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/01-import.webp" type="image/webp"><img src="assets/shots/01-import.jpg" alt="EagleDesk – Bring in the story" width="1600" height="900"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Bring in the story</b><span>Import from Jira, Azure DevOps or Copado – or paste the request.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/02-root-cause.webp" type="image/webp"><img src="assets/shots/02-root-cause.jpg" alt="EagleDesk – Root cause in plain English" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Root cause in plain English</b><span>The AI reads the org read-only and explains exactly where and why it fails.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/04-proposed.jpg" alt="EagleDesk – The proposed fix, explained" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/04-proposed.webp" type="image/webp"><img src="assets/shots/04-proposed.jpg" alt="EagleDesk – The proposed fix, explained" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>The proposed fix, explained</b><span>Where the bug is and what each change does, step by step.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review block by block" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/05-review.webp" type="image/webp"><img src="assets/shots/05-review.jpg" alt="EagleDesk – Review block by block" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Review block by block</b><span>A plain-English note on every change. Accept or reject each block.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/06-validate.jpg" alt="EagleDesk – Validate before you deploy" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/06-validate.webp" type="image/webp"><img src="assets/shots/06-validate.jpg" alt="EagleDesk – Validate before you deploy" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Validate before you deploy</b><span>Pick the tests, see every step that will happen, type the org name to confirm.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Deployed – with a backup" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/07-deployed.webp" type="image/webp"><img src="assets/shots/07-deployed.jpg" alt="EagleDesk – Deployed – with a backup" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed">Personal &amp; Enterprise</span><b>Deployed – with a backup</b><span>Live progress, tests run, and the previous version backed up first.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/08-users.jpg" alt="EagleDesk – Users and profiles" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/08-users.webp" type="image/webp"><img src="assets/shots/08-users.jpg" alt="EagleDesk – Users and profiles" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed ent">Enterprise</span><b>Users and profiles</b><span>Everyone on the team with their own sign-in, profile and permissions.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Single sign-on" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/09-sso.webp" type="image/webp"><img src="assets/shots/09-sso.jpg" alt="EagleDesk – Single sign-on" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed ent">Enterprise</span><b>Single sign-on</b><span>Okta, Microsoft Entra ID, Google, Ping, Auth0 or Amazon Cognito over OpenID Connect.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/10-bedrock.jpg" alt="EagleDesk – AI on Amazon Bedrock" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/10-bedrock.webp" type="image/webp"><img src="assets/shots/10-bedrock.jpg" alt="EagleDesk – AI on Amazon Bedrock" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed ent">Enterprise</span><b>AI on Amazon Bedrock</b><span>The AI runs in your own AWS account – billed on your AWS bill, no AI keys.</span></figcaption></figure>
-      <figure class="sh-slide"><img src="assets/shots/11-contract.jpg" alt="EagleDesk – Your AWS Marketplace contract" width="1600" height="900" loading="lazy">
+      <figure class="sh-slide"><button class="zoom" type="button" aria-label="Enlarge screenshot"><picture><source srcset="assets/shots/11-contract.webp" type="image/webp"><img src="assets/shots/11-contract.jpg" alt="EagleDesk – Your AWS Marketplace contract" width="1600" height="900" loading="lazy"></picture></button>
         <figcaption><span class="sh-ed ent">Enterprise</span><b>Your AWS Marketplace contract</b><span>Seats come straight from your contract, checked with AWS License Manager.</span></figcaption></figure>
     </div>
     <button class="sh-nav prev" id="shPrev" aria-label="Previous picture">‹</button>
@@ -176,11 +193,12 @@
   <div class="kicker">Features</div>
   <h2>Everything for fixing a story, in one desk</h2>
   <p class="sub">No more jumping between the story, Setup, VS Code, the CLI, a spreadsheet of sandboxes and a Word template.</p>
-  <div class="grid g3">
+  <div class="bento">
+    <div class="feat big"><div class="ic">⇄</div><h3>Review block by block</h3><p>The heart of EagleDesk: every change comes with a plain-English note on what it does, next to the org's own version. Accept or reject each block, approve file by file, or read the whole original or proposed file with the changes highlighted – nothing reaches an org without you.</p>
+      <button class="zoom" type="button" aria-label="Enlarge the review screenshot"><picture><source srcset="assets/shots/05-review.webp" type="image/webp"><img src="assets/shots/05-review.jpg" alt="Reviewing a fix block by block in EagleDesk" width="1600" height="900" loading="lazy"></picture></button></div>
     <div class="feat"><div class="ic">✦</div><h3>Root cause in plain English</h3><p>The AI reads the org (read-only) – code, flows, fields, data – and explains what is wrong and why, before anything changes.</p></div>
     <div class="feat"><div class="ic">🧭</div><h3>The whole story in 30 seconds</h3><p>Each story's Overview leads with the problem, the root cause and the proposed fix, then the real state: files reviewed, alerts, validation, tests. Diagnosis, evidence, solution and the code walk-through are one click away.</p></div>
     <div class="feat"><div class="ic">💬</div><h3>Ask AI beside every page</h3><p>Ask about your org without leaving what you're doing – it knows the class, Flow, object or query on screen. Keep it docked, expand it or float it; answers come with highlighted code and query results.</p></div>
-    <div class="feat"><div class="ic">⇄</div><h3>Review block by block</h3><p>Every change comes with a plain-English note on what it does. Accept or reject each block, or read the whole original or proposed file with the changes highlighted.</p></div>
     <div class="feat"><div class="ic">🧪</div><h3>Tests in every org</h3><p>Test cases written for the change and run by the AI – in the back end with data rolled back, or in the browser with screenshots – plus your Apex test classes.</p></div>
     <div class="feat"><div class="ic">📍</div><h3>Where is my code?</h3><p>One click checks every org on your path: which has this fix, which has an older version, which has someone else's later change.</p></div>
     <div class="feat"><div class="ic">🚀</div><h3>Ready to promote</h3><p>Code deployed and every test passed? The story says so – and a filter shows every story waiting to move to the next org.</p></div>
@@ -234,16 +252,17 @@
       <li><b>Security and architecture review</b><span>How Enterprise runs in your AWS account: Bedrock, single sign-on, data and access</span></li>
       <li><b>Rollout and pricing</b><span>Users, setup help and AWS Marketplace contract options for your team</span></li>
     </ul>
-    <a class="btn light demo-open" href="#demo" data-goatcounter-click="demo-open-band" data-goatcounter-title="Watch demo (book band)">▶ Watch the 3-minute demo first</a>
+    <a class="btn light demo-open" href="#demo" data-goatcounter-click="demo-open-band" data-goatcounter-title="Watch demo (book band)">▶ Watch demo</a>
   </div>
   <form class="wl" id="bk" novalidate>
-    <h3 class="bk-h">Request a team demo</h3>
+    <h3 class="bk-h">Book a demo for your team</h3>
+    <label><span>Name <small>(optional)</small></span><input name="name" autocomplete="name"></label>
     <label>Work email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>
     <label><span>Company <small>(optional)</small></span><input name="company" autocomplete="organization"></label>
     <label>Team size<select name="size"><option value="">Choose…</option><option>1-5 people</option><option>6-20 people</option><option>21-50 people</option><option>More than 50</option></select></label>
     <label><span>What should we cover? <small>(optional)</small></span><textarea name="note" rows="3" placeholder="e.g. Enterprise on AWS, Copado + Jira, 4 sandboxes; who will join; good times for your team"></textarea></label>
     <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button class="btn primary" data-goatcounter-click="book-send" data-goatcounter-title="Demo requested">Request a team demo</button>
+    <button class="btn primary" data-goatcounter-click="book-send" data-goatcounter-title="Demo requested">Book a demo</button>
     <p class="fine" id="bkMsg" role="status">The EagleDesk team replies within one business day to schedule it. <a href="privacy.html">Privacy policy</a></p>
   </form>
 </div></section>
@@ -267,6 +286,11 @@
       <ul><li>Everything in Pro, for the whole team</li><li>Runs in your own AWS account</li><li>AI through Amazon Bedrock in your account</li><li>Single sign-on, per-person Salesforce logins</li><li>Users, roles, permissions and audit log</li></ul>
       <a class="btn primary" href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi" data-goatcounter-click="marketplace-pricing" data-goatcounter-title="AWS Marketplace (pricing)">View on AWS Marketplace</a></div>
   </div>
+  <details class="cmp" open><summary>Compare the plans</summary>
+  <div class="cmp-wrap"><table>
+    <thead><tr><th></th><th scope="col">Free</th><th scope="col">Pro <small>Personal</small></th><th scope="col">Enterprise</th></tr></thead>
+    <tbody><tr><th scope="row">Price</th><td>$0</td><td>$4.99 / month or $49.99 / year</td><td>$49 / user / month or $490 / user / year</td></tr><tr><th scope="row">Runs on</th><td>Your Mac or Windows PC</td><td>Your Mac or Windows PC</td><td>Your own AWS account</td></tr><tr><th scope="row">Who uses it</th><td>One person</td><td>One person</td><td>The whole team – one seat per user</td></tr><tr><th scope="row">Org Browser, SOQL, Org Compare, debug logs</th><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">AI root cause, fixes and Ask AI</th><td>–</td><td>✓ your own AI subscription</td><td>✓ Amazon Bedrock in your account</td></tr><tr><th scope="row">Block-by-block review, validate &amp; deploy with backups</th><td>–</td><td>✓</td><td>✓</td></tr><tr><th scope="row">AI-run tests and QA / UAT evidence</th><td>–</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Workspaces</th><td>1</td><td>1 included, extra $1 / month each</td><td>✓</td></tr><tr><th scope="row">Sign-in</th><td>On your computer</td><td>On your computer</td><td>Single sign-on (OpenID Connect) + each person's own Salesforce login</td></tr><tr><th scope="row">Users, roles, permissions, audit log</th><td>–</td><td>–</td><td>✓</td></tr><tr><th scope="row">Where your data lives</th><td>Your computer</td><td>Your computer</td><td>Your AWS account</td></tr><tr><th scope="row">Billing</th><td>–</td><td>Monthly or yearly, cancel anytime</td><td>On your AWS bill, 1 or 12 months</td></tr></tbody>
+  </table></div></details>
   <p class="fine" style="text-align:center;margin-top:14px">Enterprise: AWS infrastructure and Amazon Bedrock usage are billed by AWS to your account (about $3 a day at the smallest sizes, plus AI use). Questions or a private offer? <a href="support.html#contact">Talk to us</a>.
     Rather we hosted it for you? <a href="#cloud">Join the Cloud for teams waitlist</a>.</p>
   <p class="fine" style="text-align:center;margin-top:6px">Personal: when the trial ends without a subscription, EagleDesk becomes read-only – you can still look at everything and browse your orgs, and all your work is kept.</p>
@@ -316,7 +340,7 @@
     <div class="cta" style="justify-content:center">
       <a class="btn primary" style="background:#fff;color:#0b2e6b" href="https://github.com/konareddy/fixdesk-site/releases/latest/download/EagleDesk-mac.dmg" data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">⬇ Download for Mac</a>
       <a class="btn primary" style="background:#fff;color:#0b2e6b" href="https://github.com/konareddy/fixdesk-site/releases/latest/download/EagleDesk-windows.exe" data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">⬇ Download for Windows</a>
-      <a class="btn ghost" href="support.html#contact">Talk to us</a></div>
+      <a class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.4);background:transparent" href="#book" data-goatcounter-click="book-download" data-goatcounter-title="Book a demo (download)">Book a demo</a></div>
     <p class="dl-note" style="opacity:.85;font-size:14px;margin-top:14px"><b>Mac:</b> macOS 11 Big Sur or later, Intel and Apple silicon (native on both).
       <b>Windows:</b> Windows 10 or 11, 64-bit.<br>
       <b>Mac:</b> signed and notarized by Apple - open the download, drag EagleDesk to Applications and open it as usual.
@@ -324,6 +348,11 @@
     <p class="fine" style="color:rgba(255,255,255,.7)">Mac version 0.1.32 · Windows version 0.1.32 · macOS 11 or later · Windows 10 or 11</p>
   </div>
 </div></section>
+
+<dialog id="lb" class="lb" aria-label="Screenshot">
+  <button class="lb-x" aria-label="Close">✕</button>
+  <img alt="">
+</dialog>
 
 <dialog id="demo" class="demo-dlg" aria-label="EagleDesk demo video">
   <div class="dd-head"><b>EagleDesk demo</b>
@@ -339,6 +368,7 @@
     <p class="fine">Copado, Gearset, Jira, Azure DevOps and Salesforce are trademarks of their respective owners. EagleDesk is not affiliated with or endorsed by them.</p>
     <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
   <div><h4>Product</h4><a href="#why">Why EagleDesk</a><a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#editions">Personal &amp; Enterprise</a><a href="#pricing">Pricing</a><a href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi">Enterprise on AWS Marketplace</a><a href="security.html">Security &amp; privacy</a></div>
+  <div><h4>Resources</h4><a href="https://www.youtube.com/@eagledeskapp">Video tutorials</a><a href="#demo" class="demo-open">Watch demo</a><a href="aws/eagledesk.yaml">AWS CloudFormation template</a><a href="https://aws.amazon.com/marketplace/pp/prodview-pjztsfbejlkoi">AWS Marketplace listing</a></div>
   <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#kb">Knowledge base<span class="soon">SOON</span></a><a href="support.html#tickets">Support tickets<span class="soon">SOON</span></a><a href="support.html#contact">Contact</a></div>
   <div><h4>Legal</h4><a href="terms.html">Terms of use</a><a href="privacy.html">Privacy policy</a></div>
   <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
@@ -427,8 +457,22 @@ document.getElementById("bk").addEventListener("submit", async e => {
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
     f.innerHTML = `<div class="wl-done"><b>Thanks – your team demo request is in.</b><p>The EagleDesk team will be in touch within one business day to schedule it.</p></div>`;
-  } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Request a team demo"; }
+  } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Book a demo"; }
 });
+</script>
+<script>
+// phone menu
+(() => { const t = document.getElementById("navToggle"), m = document.getElementById("navMenu");
+  t.onclick = () => { const o = t.getAttribute("aria-expanded") !== "true"; t.setAttribute("aria-expanded", o); m.classList.toggle("open", o); };
+  m.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { t.setAttribute("aria-expanded", "false"); m.classList.remove("open"); }));
+  addEventListener("keydown", e => { if (e.key === "Escape" && m.classList.contains("open")) { t.click(); t.focus(); } });
+})();
+// click a screenshot to see it full size
+(() => { const d = document.getElementById("lb"), im = d.querySelector("img");
+  document.querySelectorAll("button.zoom").forEach(b => b.addEventListener("click", () => { const i = b.querySelector("img"); im.src = i.currentSrc || i.src; im.alt = i.alt; d.showModal();
+    window.goatcounter && goatcounter.count && goatcounter.count({ path: "zoom-" + (i.src.split("/").pop()), title: "Screenshot enlarged", event: true }); }));
+  d.addEventListener("click", () => d.close());
+})();
 </script>
 </body>
 </html>
