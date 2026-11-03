@@ -356,7 +356,7 @@ document.getElementById("wl").addEventListener("submit", async e => {
     const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
-    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll write to ${data.email.replace(/[<>&"]/g, "")} when EagleDesk Cloud opens.</p></div>`;
+    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll let you know when EagleDesk Cloud opens.</p></div>`;
   } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Join the waitlist"; }
 });
 </script>
@@ -387,7 +387,7 @@ document.getElementById("wl").addEventListener("submit", async e => {
     const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
-    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll write to ${data.email.replace(/[<>&"]/g, "")} when EagleDesk Cloud opens.</p></div>`;
+    f.innerHTML = `<div class="wl-done"><b>You're on the list.</b><p>Thanks - we'll let you know when EagleDesk Cloud opens.</p></div>`;
   } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Join the waitlist"; }
 });
 </script>
@@ -426,7 +426,7 @@ document.getElementById("bk").addEventListener("submit", async e => {
     const r = await fetch("https://eagledesk-feedback.eagledesk.workers.dev/waitlist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || "Something went wrong - please try again.");
-    f.innerHTML = `<div class="wl-done"><b>Thanks – your team demo request is in.</b><p>The EagleDesk team will write to ${data.email.replace(/[<>&"]/g, "")} within one business day to schedule it.</p></div>`;
+    f.innerHTML = `<div class="wl-done"><b>Thanks – your team demo request is in.</b><p>The EagleDesk team will be in touch within one business day to schedule it.</p></div>`;
   } catch (x) { msg.textContent = x.message; msg.className = "fine wl-err"; btn.disabled = false; btn.textContent = "Request a team demo"; }
 });
 </script>
