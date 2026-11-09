@@ -20,7 +20,7 @@
   <div class="kicker">Legal</div>
   <h1 style="font-size:clamp(30px,4vw,44px)">EagleDesk for Chrome - Privacy Policy</h1>
   <p class="sub">The browser extension "EagleDesk for Salesforce" has no servers of its own and collects nothing.</p>
-  <p class="fine">Last updated: 9 November 2026</p>
+  <p class="fine">Last updated: 9 November 2026 (saved passwords)</p>
 </div></section>
 
 <section style="padding-top:12px"><div class="wrap legal">
@@ -29,7 +29,7 @@
   <ul>
     <li>EagleDesk for Chrome sends <b>nothing</b> to Cloudeation: no analytics, no crash reports, no Salesforce data, no session information.</li>
     <li>It talks only to the Salesforce orgs you are logged in to, straight from your browser.</li>
-    <li>Your settings, saved orgs, query history and notes stay in your browser. EagleDesk never stores passwords.</li>
+    <li>Your settings, saved orgs, query history and notes stay in your browser. Passwords are only saved if you turn that on - encrypted with a master password only you know.</li>
   </ul>
 </div>
 
@@ -46,7 +46,10 @@
 </ul>
 
 <h2>3. What is stored, and where</h2>
-<p>My Orgs (the orgs you save or that EagleDesk remembers: name, group, login address, username and start page - never passwords), settings (such as org names and which orgs allow data changes or are blocked), query history, saved queries, REST Explorer history, notes and Data Loader backups and results are stored in your Chrome profile (extension storage and IndexedDB). They never leave your browser unless you export them yourself. You can delete them in EagleDesk › Settings › Data, or by removing the extension.</p>
+<p>My Orgs (the orgs you save or that EagleDesk remembers: name, group, login address, username and start page), settings (such as org names and which orgs allow data changes or are blocked), query history, saved queries, REST Explorer history, notes and Data Loader backups and results are stored in your Chrome profile (extension storage and IndexedDB). They never leave your browser unless you export them yourself. You can delete them in EagleDesk › Settings › Data, or by removing the extension.</p>
+
+<h2>Saved passwords (optional)</h2>
+<p>Saved passwords are off until you turn them on in My Orgs and choose a master password. The master password is never stored. Each saved password is encrypted on your computer with AES-256, using a key derived from the master password (PBKDF2-SHA256, 600,000 rounds). While unlocked, the key is kept in the browser's memory only, and it locks again after the idle time you choose, or when Chrome closes. A saved password is only ever filled into the Salesforce login page of that org, in a tab you opened with "Log in" in My Orgs. Saved passwords are never sent to Cloudeation, never included in exports, and can't be recovered if you forget the master password. Turning saved passwords off deletes them.</p>
 
 <h2>4. What the extension connects to</h2>
 <p>Only the Salesforce domains of your orgs (<code>*.salesforce.com</code>, <code>*.force.com</code>, <code>*.salesforce-setup.com</code>, <code>*.cloudforce.com</code>). Links you choose to open, such as eagledesk.app or the AWS Marketplace, open in a normal browser tab; links to eagledesk.app carry a tag saying they came from the extension, so we can count visits from it. The extension itself sends no data to those sites.</p>
