@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EagleDesk for Chrome Privacy</title>
+<link rel="canonical" href="https://eagledesk.app/chrome-privacy.html">
+<meta name="description" content="EagleDesk for Chrome has no servers and collects nothing: what it reads, where it keeps it, and what it connects to.">
+<link rel="icon" href="assets/eagledesk.png">
+<link rel="stylesheet" href="style.css?v=20261103">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
+  <nav><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="security.html">Security</a><a href="support.html">Support</a><a href="support.html#contact">Contact</a></nav>
+</div></header>
+
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Legal</div>
+  <h1 style="font-size:clamp(30px,4vw,44px)">EagleDesk for Chrome - Privacy Policy</h1>
+  <p class="sub">The browser extension "EagleDesk for Salesforce" has no servers of its own and collects nothing.</p>
+  <p class="fine">Last updated: 9 November 2026</p>
+</div></section>
+
+<section style="padding-top:12px"><div class="wrap legal">
+
+<div class="summary"><b>In short</b>
+  <ul>
+    <li>EagleDesk for Chrome sends <b>nothing</b> to Cloudeation: no analytics, no crash reports, no Salesforce data, no session information.</li>
+    <li>It talks only to the Salesforce orgs you are logged in to, straight from your browser.</li>
+    <li>Your settings, saved orgs, query history and notes stay in your browser. EagleDesk never stores passwords.</li>
+  </ul>
+</div>
+
+<h2>1. Who is responsible</h2>
+<p>Cloudeation Technologies LLC, 116 Village Blvd, Suite #200, Princeton, NJ 08540, USA ("Cloudeation") publishes EagleDesk for Chrome. This policy covers the browser extension only. The EagleDesk desktop app and website are covered by the <a href="privacy.html">EagleDesk Privacy Policy</a>.</p>
+
+<h2>2. What the extension uses, and why</h2>
+<ul>
+  <li><b>Your Salesforce session.</b> The extension reads the Salesforce session cookie of orgs you are logged in to in Chrome and uses it to call that org's Salesforce APIs for you. The session is used only in requests to the same Salesforce org. It is never sent to Cloudeation or anyone else, and it is never stored by the extension.</li>
+  <li><b>Salesforce data you look at.</b> Records, metadata, code, users, debug logs and query results are fetched from Salesforce when you ask for them and shown in the extension. They are processed in your browser only.</li>
+  <li><b>The Salesforce page you are on.</b> On Salesforce pages, the extension notes which record or Setup page is open, so the side panel can show it. If you turn on "Show field API names", it also reads the field markers Lightning puts on record pages to label each field with its API name. It does not read or change the content of other websites.</li>
+  <li><b>Records you import.</b> When you use the Data Loader, the rows of the CSV file you choose are sent to your own Salesforce org - only orgs you have allowed data changes for. Before an update, the current values of the affected records are saved in your browser as a backup, so you can put them back. Nothing is sent anywhere else.</li>
+  <li><b>Screenshots.</b> When you click the capture button, the extension takes a picture of the current Salesforce page and saves it to your Downloads folder and clipboard. Nothing is uploaded.</li>
+</ul>
+
+<h2>3. What is stored, and where</h2>
+<p>My Orgs (the orgs you save or that EagleDesk remembers: name, group, login address, username and start page - never passwords), settings (such as org names and which orgs allow data changes or are blocked), query history, saved queries, REST Explorer history, notes and Data Loader backups and results are stored in your Chrome profile (extension storage and IndexedDB). They never leave your browser unless you export them yourself. You can delete them in EagleDesk › Settings › Data, or by removing the extension.</p>
+
+<h2>4. What the extension connects to</h2>
+<p>Only the Salesforce domains of your orgs (<code>*.salesforce.com</code>, <code>*.force.com</code>, <code>*.salesforce-setup.com</code>, <code>*.cloudforce.com</code>). Links you choose to open, such as eagledesk.app or the AWS Marketplace, open in a normal browser tab; links to eagledesk.app carry a tag saying they came from the extension, so we can count visits from it. The extension itself sends no data to those sites.</p>
+
+<h2>5. What we don't do</h2>
+<p>We do not collect, sell, rent or share any data from the extension. We do not use it for advertising, profiling or credit decisions. We do not use remote code: all of the extension's code is included in the package published on the Chrome Web Store.</p>
+
+<h2>6. Changes and contact</h2>
+<p>If this policy changes, the new version is published on this page with a new date. Questions: <a href="mailto:support@eagledesk.app?subject=EagleDesk%20for%20Chrome%20privacy">support@eagledesk.app</a>.</p>
+
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="logo" href="./"><img src="assets/eagle-mark.png" alt="" class="logo-eagle"><span>Eagle<b>Desk</b><small>by Cloudeation</small></span></a>
+    <p>© <span id="yr">2026</span> Cloudeation. All rights reserved.</p></div>
+  <div><h4>Product</h4><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="security.html">Security &amp; privacy</a></div>
+  <div><h4>Support</h4><a href="support.html">Help center</a><a href="support.html#contact">Contact</a></div>
+  <div><h4>Legal</h4><a href="terms.html">Terms of use</a><a href="privacy.html">Privacy policy</a><a href="chrome-privacy.html">Chrome extension privacy</a></div>
+  <div><h4>Company</h4><a href="https://cloudeation.net">Cloudeation</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
