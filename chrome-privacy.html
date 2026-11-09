@@ -29,7 +29,7 @@
   <ul>
     <li>EagleDesk for Chrome sends <b>nothing</b> to Cloudeation: no analytics, no crash reports, no Salesforce data, no session information.</li>
     <li>It talks only to the Salesforce orgs you are logged in to, straight from your browser.</li>
-    <li>Your settings, saved orgs, query history and notes stay in your browser. Passwords are only saved if you turn that on - encrypted with a master password only you know.</li>
+    <li>Your settings, saved orgs, query history and notes stay in your browser. Passwords you choose to save stay on your computer, encrypted.</li>
   </ul>
 </div>
 
@@ -49,7 +49,7 @@
 <p>My Orgs (the orgs you save or that EagleDesk remembers: name, group, login address, username and start page), settings (such as org names and which orgs allow data changes or are blocked), query history, saved queries, REST Explorer history, notes and Data Loader backups and results are stored in your Chrome profile (extension storage and IndexedDB). They never leave your browser unless you export them yourself. You can delete them in EagleDesk › Settings › Data, or by removing the extension.</p>
 
 <h2>Saved passwords (optional)</h2>
-<p>Saved passwords are off until you turn them on in My Orgs and choose a master password. The master password is never stored. Each saved password is encrypted on your computer with AES-256, using a key derived from the master password (PBKDF2-SHA256, 600,000 rounds). While unlocked, the key is kept in the browser's memory only, and it locks again after the idle time you choose, or when Chrome closes. A saved password is only ever filled into the Salesforce login page of that org, in a tab you opened with "Log in" in My Orgs. Saved passwords are never sent to Cloudeation, never included in exports, and can't be recovered if you forget the master password. Turning saved passwords off deletes them.</p>
+<p>You can save a password with an org in My Orgs, so EagleDesk can log you in. Saved passwords stay on your computer, encrypted with AES-256. By default the key is kept on your computer too: this keeps passwords out of plain sight, but anyone with full access to your computer could read them, as with any password saved in a browser. You can add a master password for extra protection: it is never stored, the key is derived from it (PBKDF2-SHA256, 600,000 rounds), and saved passwords lock again after the idle time you choose, or when Chrome closes. A saved password is only ever filled into the Salesforce login page of that org, in a tab you opened with "Log in" in My Orgs. Saved passwords are never sent to Cloudeation and never included in exports. "Delete saved passwords" in My Orgs removes them.</p>
 
 <h2>4. What the extension connects to</h2>
 <p>Only the Salesforce domains of your orgs (<code>*.salesforce.com</code>, <code>*.force.com</code>, <code>*.salesforce-setup.com</code>, <code>*.cloudforce.com</code>). Links you choose to open, such as eagledesk.app or the AWS Marketplace, open in a normal browser tab; links to eagledesk.app carry a tag saying they came from the extension, so we can count visits from it. The extension itself sends no data to those sites.</p>
