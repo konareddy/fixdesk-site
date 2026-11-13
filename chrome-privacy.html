@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EagleDesk for Chrome Privacy</title>
 <link rel="canonical" href="https://eagledesk.app/chrome-privacy.html">
-<meta name="description" content="EagleDesk for Chrome has no servers and collects nothing: what it reads, where it keeps it, and what it connects to.">
+<meta name="description" content="EagleDesk for Chrome has no servers of its own and collects nothing except feedback you choose to send: what it reads, where it keeps it, and what it connects to.">
 <link rel="icon" href="assets/eagledesk.png">
 <link rel="stylesheet" href="style.css?v=20261103">
 </head>
@@ -19,15 +19,15 @@
 <section class="page-hero"><div class="wrap">
   <div class="kicker">Legal</div>
   <h1 style="font-size:clamp(30px,4vw,44px)">EagleDesk for Chrome - Privacy Policy</h1>
-  <p class="sub">The browser extension "EagleDesk for Salesforce" has no servers of its own and collects nothing.</p>
-  <p class="fine">Last updated: 9 November 2026 (saved passwords)</p>
+  <p class="sub">The browser extension "EagleDesk for Salesforce" has no servers of its own and collects nothing, except feedback you choose to send.</p>
+  <p class="fine">Last updated: 13 November 2026 (feedback)</p>
 </div></section>
 
 <section style="padding-top:12px"><div class="wrap legal">
 
 <div class="summary"><b>In short</b>
   <ul>
-    <li>EagleDesk for Chrome sends <b>nothing</b> to Cloudeation: no analytics, no crash reports, no Salesforce data, no session information.</li>
+    <li>EagleDesk for Chrome sends <b>nothing</b> to Cloudeation on its own: no analytics, no crash reports, no Salesforce data, no session information. The only exception is feedback you write and choose to send with 💬 Feedback.</li>
     <li>It talks only to the Salesforce orgs you are logged in to, straight from your browser.</li>
     <li>Your settings, saved orgs, query history and notes stay in your browser. Passwords you choose to save stay on your computer, encrypted.</li>
   </ul>
@@ -43,6 +43,7 @@
   <li><b>The Salesforce page you are on.</b> On Salesforce pages, the extension notes which record or Setup page is open, so the side panel can show it. If you turn on "Show field API names", it also reads the field markers Lightning puts on record pages to label each field with its API name. It does not read or change the content of other websites.</li>
   <li><b>Records you import.</b> When you use the Data Loader, the rows of the CSV file you choose are sent to your own Salesforce org - only orgs you have allowed data changes for. Before an update, the current values of the affected records are saved in your browser as a backup, so you can put them back. Nothing is sent anywhere else.</li>
   <li><b>Screenshots.</b> When you click the capture button, the extension takes a picture of the current Salesforce page and saves it to your Downloads folder and clipboard. Nothing is uploaded.</li>
+  <li><b>Feedback you send.</b> 💬 Feedback lets you send the EagleDesk team a message, optionally with up to 3 screenshots you add yourself. Nothing is sent until you press Send, and only what the form shows you: your text, the screenshots, the extension version, your operating system and Chrome version, the EagleDesk screen you came from, and a random code that groups this browser's tickets (it doesn't identify you). No Salesforce data, org names or session information is added. It goes to EagleDesk's feedback service (run on Cloudflare), which files it as a ticket in a private GitHub repository that only the EagleDesk team can see. Each ticket has a random key kept in your browser, so only your browser can see its status and our replies. Please don't put client data in feedback or screenshots. To have a ticket deleted, email support@eagledesk.app with its number.</li>
 </ul>
 
 <h2>3. What is stored, and where</h2>
@@ -52,10 +53,10 @@
 <p>You can save a password with an org in My Orgs, so EagleDesk can log you in with one click. Saved passwords stay on your computer, encrypted with AES-256 using a key that is also kept on your computer. This keeps them out of plain sight; like any password saved in a browser, anyone with full access to your computer could read them. A saved password is only ever filled into the Salesforce login page of that org, in a tab you opened with "Log in" in My Orgs. Saved passwords are never sent to Cloudeation and never included in exports. "Delete saved passwords" in My Orgs removes them.</p>
 
 <h2>4. What the extension connects to</h2>
-<p>Only the Salesforce domains of your orgs (<code>*.salesforce.com</code>, <code>*.force.com</code>, <code>*.salesforce-setup.com</code>, <code>*.cloudforce.com</code>). Links you choose to open, such as eagledesk.app or the AWS Marketplace, open in a normal browser tab; links to eagledesk.app carry a tag saying they came from the extension, so we can count visits from it. The extension itself sends no data to those sites.</p>
+<p>The Salesforce domains of your orgs (<code>*.salesforce.com</code>, <code>*.force.com</code>, <code>*.salesforce-setup.com</code>, <code>*.cloudforce.com</code>), and EagleDesk's feedback service (<code>eagledesk-feedback.eagledesk.workers.dev</code>) - only when you send feedback, add to a ticket or open My tickets (and, if you have sent feedback, a check for replies at most every 6 hours). Links you choose to open, such as eagledesk.app or the AWS Marketplace, open in a normal browser tab; links to eagledesk.app carry a tag saying they came from the extension, so we can count visits from it. The extension itself sends no data to those sites.</p>
 
 <h2>5. What we don't do</h2>
-<p>We do not collect, sell, rent or share any data from the extension. We do not use it for advertising, profiling or credit decisions. We do not use remote code: all of the extension's code is included in the package published on the Chrome Web Store.</p>
+<p>We do not collect any data from the extension other than feedback you choose to send, and we do not sell, rent or share it. We do not use it for advertising, profiling or credit decisions. We do not use remote code: all of the extension's code is included in the package published on the Chrome Web Store.</p>
 
 <h2>6. Changes and contact</h2>
 <p>If this policy changes, the new version is published on this page with a new date. Questions: <a href="mailto:support@eagledesk.app?subject=EagleDesk%20for%20Chrome%20privacy">support@eagledesk.app</a>.</p>
